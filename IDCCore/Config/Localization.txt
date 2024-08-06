@@ -1,4 +1,0 @@
-Key,english
-idcXuiCount,Count
-idcXuiItem,Item
-idcXuiOutputsLabel,Outputs
