@@ -1,0 +1,469 @@
+<Faw>
+<!-- *********************************************************************************************************************************************** -->		
+		<!-- ADD QUALITY TO MOD BUNDLES -->
+<!--	<set xpath="/items/item[@name='questRewardT1RangedModsBundle']//property[@name='Random_item_count']/@value">6,6,6,6,6,6,6,6,6,6,6</set>
+	<set xpath="/items/item[@name='questRewardT2RangedModsBundle']//property[@name='Random_item_count']/@value">6,6,6,6,6,6,6,6,6,6</set>
+	<set xpath="/items/item[@name='questRewardT3RangedModsBundle']//property[@name='Random_item_count']/@value">6,6,6,6</set>
+	<set xpath="/items/item[@name='questRewardT1MeleeModsBundle']//property[@name='Random_item_count']/@value">6,6,6,6,6,6</set>
+	<set xpath="/items/item[@name='questRewardMiningHelmetBundle']//property[@name='Create_item_count']/@value">6,6</set>
+	<set xpath="/items/item[@name='questRewardT2MeleeModsBundle' or @name='questRewardT3MeleeModsBundle']//property[@name='Create_item_count']/@value">6,6,6,6,6</set>
+	<set xpath="/items/item[@name='questRewardT2LightArmorBundle' or @name='questRewardT2HeavyArmorBundle']//property[@name='Create_item_count']/@value">3,3,3,3,3,3,3</set>
+	<set xpath="/items/item[@name='questRewardT2LightArmorBonusBundle' or @name='questRewardT2HeavyArmorBonusBundle']//property[@name='Create_item_count']/@value">5-6,6,5-6,5-6,5-6,5-6,3</set> -->
+<!-- *********************************************************************************************************************************************** -->		
+	<append xpath="//item[@name='resourceAnimalFat']">
+	<property name="Tags" value="sveca"/>
+	</append>
+	
+	<append xpath="/items">
+		
+		<item name="resourceWoodScraps"><!-- scrap material -->
+			<property name="CustomIcon" value="modularFireWoodStackC"/>
+			<property name="DescriptionKey" value="resourceWoodScrapsDesc"/>
+			<property name="HoldType" value="45"/>
+			<property name="Meshfile" value="@:Other/Items/Misc/sackPrefab.prefab"/>
+			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="MresourceWoodScraps"/>
+			<property name="Weight" value="10"/>
+			<property name="Stacknumber" value="6000"/><!-- STK resource -->
+			<property name="FuelValue" value="2"/>
+			<property name="EconomicValue" value="0"/>
+			<property name="EconomicBundleSize" value="25"/>
+			<property name="Group" value="Resources"/>
+			<property name="RepairAmount" value="100"/>
+			<property name="RepairTime" value=".1"/>
+			<property name="LootExpValue" value="1"/>
+			<property name="CraftingIngredientTime" value=".1"/>
+		</item>
+		<!-- *** SPENT WALL TORCH *** -->
+		<item name="spentWallTorch">
+			<property name="Tags" value="blunt,melee,tool,weapon,meleeWeapon"/>
+			<property name="DescriptionKey" value="spentWallTorchDesc"/>
+			<property name="CustomIcon" value="spentWallTorch"/>
+			<property name="DisplayType" value="meleeTorch"/>
+			<property name="Class" value="ItemClassTorch"/>
+			<property name="HoldType" value="12"/>
+			<property name="Meshfile" value="@:Other/Items/Tools/torch02_unlitPrefab.prefab"/>
+			<property name="DropMeshfile" value="@:Other/Items/Tools/torch02_droppedPrefab.prefab"/>
+			<!-- alternative hold mesh and type -->
+			<!-- <property name="HoldType" value="45"/>
+			<property name="Meshfile" value="@:Other/Items/Misc/sackPrefab.prefab"/>
+			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/> -->			
+			<property name="DropScale" value=".6"/>
+			<property name="Material" value="MresourceWoodScraps"/>
+			<property name="Stacknumber" value="50"/> <!-- STK torch -->
+			<property name="EconomicValue" value="0"/>		
+			<property name="SoundUnholster" value="weapon_unholster"/>
+			<property name="SoundHolster" value="weapon_holster"/>
+			<property name="Group" value="Basics,Building,advBuilding"/>
+		</item>	
+<!-- *********************************************************************************************************************************************** -->		
+
+		<!-- *** BATTERY *** -->
+		<item name="resourceNiCdBattery">
+			<property name="CustomIcon" value="resourceBattery"/>
+			<property name="DescriptionKey" value="resourceNiCdBatteryDesc"/>
+			<property name="Tags" value="battery"/>
+			<property name="HoldType" value="45"/>
+			<property name="Meshfile" value="@:Other/Items/Misc/sackPrefab.prefab"/>
+			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="Mlead_scrap"/>
+			<property name="Stacknumber" value="5"/><!-- STK resource -->
+			<property name="EconomicValue" value="100"/>
+			<property name="TraderStageTemplate" value="electricTier2"/>
+			<property name="Group" value="Resources"/>
+			<property name="SellableToTrader" value="false"/>
+			<property name="Group" value="Resources,Chemicals"/>
+		</item>
+<!-- *********************************************************************************************************************************************** -->		
+		
+		<!-- *** HELMET FILTER *** -->
+		<item name="resourceHelmetWaterFilter">
+			<property name="Tags" value="filter"/>
+			<property name="CustomIcon" value="resourceWaterFilter"/>
+			<property name="DescriptionKey" value="resourceHelmetWaterFilterDesc"/>
+			<property name="CustomIconTint" value="00ffff"/>
+			<property name="HoldType" value="45"/>
+			<property name="Meshfile" value="@:Other/Items/Misc/sackPrefab.prefab"/>
+			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="MresourceScrapPolymers"/>
+			<property name="Stacknumber" value="50"/><!-- STK resource -->
+			<property name="EconomicValue" value="5"/>
+			<property name="Group" value="Resources"/>
+		</item>		
+	</append>
+<!-- *********************************************************************************************************************************************** -->	
+ 		<append xpath="//item[@name='drinkJarRiverWater']//effect_group[@name='Drink Tier 0']">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="helmetPurifierDurability" operation="subtract" value="1">
+			<requirement name="CVarCompare" cvar="helmetPurifierDurability" operation="GT" value="0"/>
+			<requirement name="HasBuff" buff="buffHelmetPurifierActive"/>
+		</triggered_effect>
+	</append>
+	
+	<append xpath="//item[@name='resourceWaterFilter']">
+		<property name="Tags" value="filter"/>
+	</append>
+<!-- *********************************************************************************************************************************************** -->	
+		
+		<!-- REPAIR ITEMS-->
+<set xpath="/items/item[@name='resourceYuccaFibers']/property[@name='RepairAmount']/@value">1400</set>
+<set xpath="/items/item[@name='resourceYuccaFibers']/property[@name='RepairTime']/@value">.8</set>
+
+<append xpath="/items/item[@name='resourceSewingKit' or (@name='resourceDuctTape')]">
+		<property name="RepairTime" value=".1"/>
+		<property name="RepairAmount" value="320000"/>
+</append>
+
+<append xpath="/items">
+<!--	<item name="resourceAnimalFat">
+			<property name="Extends" value="resourceRepairKit"/>	
+			<property name="RepairTime" value=".1"/>
+			<property name="RepairAmount" value="320000"/>
+			<property name="EconomicValue" value="5"/>
+	</item> -->
+<!--	<item name="ammoGasCan">
+			<property name="Extends" value="resourceRepairKit"/>
+			<property name="RepairTime" value=".15"/>
+			<property name="RepairAmount" value="180"/>
+			<property name="EconomicValue" value="1"/>		
+	</item> -->
+
+	<item name="resourceRepairBattery">
+			<property name="Extends" value="resourceRepairKit"/>
+			<property name="RepairTime" value="3"/>
+			<property name="RepairAmount" value="320000"/>
+			<property name="CustomIcon" value="modGunMeleeNiCdBattery"/>
+			<property name="DescriptionKey" value="resourceRepairBatteryDesc"/>
+			<property name="EconomicValue" value="65"/>
+	</item>
+</append>
+<!-- *********************************************************************************************************************************************** -->	
+		
+		<!-- WATER PURIFIER DEGRADATION -->	
+<!-- <append xpath="/items/item[@name='meleeHandPlayer']">
+	<effect_group tiered="false">
+			<triggered_effect trigger="onSelfAction2End" action="ModifyEquipmentModDurability, DurabilityOverhaul" mod_tags="WaterPurifier" equipment_tags="armor" value="-1">
+				<requirement name="HasBuff"  buff="buffWaterPurifier"/>
+			</triggered_effect>
+	</effect_group>
+</append>
+<append xpath="/items/item[@name='drinkJarRiverWater']">
+		<effect_group tiered="false">
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyEquipmentModDurability, DurabilityOverhaul" mod_tags="WaterPurifier" equipment_tags="armor" value="-1">
+				<requirement name="HasBuff" buff="buffWaterPurifier"/>
+			</triggered_effect>
+	</effect_group>
+</append> -->	
+<!-- *********************************************************************************************************************************************** -->
+
+		<!-- NIGHTVISION GOGGLES DEGRADATION -->
+	<!-- <set xpath="/items/item[@name='apparelNightvisionGoggles']/effect_group[@tiered='false']/@tiered">true</set>
+	<append xpath="/items/item[@name='apparelNightvisionGoggles']/property[@name='Tags']/@value">,ClothingDegradation</append>
+	<append xpath="/items/item[@name='apparelNightvisionGoggles']">
+		<property name="EconomicValue" value="60"/>
+		<property name="ShowQuality" value="true"/>
+		<property name="ShowBreakTooltip" value="true"/>
+		<property name="RepairTools" value="resourceRepairKit"/>
+		<property name="UnlimitedRepairs" value="false"/>		
+	</append>
+	<set xpath="/items/item[@name='apparelNightvisionGoggles']/effect_group">
+		<requirement name="IsLocalPlayer"/>
+		<triggered_effect trigger="onOtherDamagedSelf" action="ModifyEquipmentDurability, DurabilityOverhaul" equipment_tags="clothing" value="-.3"/>
+		<triggered_effect trigger="onSelfEnteredGame" action="AddBuff" buff="buffNVGDeactivate"/>
+		<triggered_effect trigger="onSelfItemActivate" action="AddBuff" buff="buffNVGActive"/>
+		<triggered_effect trigger="onSelfItemDeactivate" action="RemoveBuff" buff="buffNVGActive"/>
+		<triggered_effect trigger="onSelfEquipStop" action="RemoveBuff" buff="buffNVGActive"/>
+
+		<triggered_effect trigger="onSelfEquipStart" action="AddPart" part="HeadLightTPV" prefab="ScreenEffects/DeferredNV/NVGLight" parentTransform="Spotlight" localPos="0,0,0" localRot="90,0,0"/>
+		<triggered_effect trigger="onSelfEquipStart" action="AddPart" part="HeadLightFPV" prefab="ScreenEffects/DeferredNV/NVGLight" parentTransform="CameraNode" localPos="0,0,.1" localRot="-90,0,0"/>
+		<triggered_effect trigger="onSelfEquipStop" action="RemovePart" part="HeadLightTPV"/>
+		<triggered_effect trigger="onSelfEquipStop" action="RemovePart" part="HeadLightFPV"/>
+			
+		<triggered_effect trigger="onSelfItemDeactivate" action="SetPartActive" part="HeadLightTPV" active="false"/>
+		<triggered_effect trigger="onSelfItemDeactivate" action="SetPartActive" part="HeadLightFPV" active="false"/>
+	
+	<effect_group>		
+		<passive_effect name="DegradationMax" operation="base_set" value="300,1000" tier="1,6"/>
+	</effect_group>	
+	
+	<effect_group>
+		<requirement name="EquipmenBroken, DurabilityOverhaul"/>
+		<triggered_effect trigger="onSelfPrimaryActionUpdate" action="ModifyScreenEffect" effect_name="NightVision" intensity="0" fade="0"/>
+		<triggered_effect trigger="onSelfPrimaryActionUpdate" action="SetPartActive" part="HeadLightTPV" active="false"/>
+		<triggered_effect trigger="onSelfPrimaryActionUpdate" action="SetPartActive" part="HeadLightFPV" active="false"/>
+		<triggered_effect trigger="onSelfPrimaryActionUpdate" action="RemoveBuff" buff="buffNVGActive"/>
+		<triggered_effect trigger="onSelfPrimaryActionUpdate" action="RemoveBuff" buff="buffNightVision"/>
+		<triggered_effect trigger="onSelfPrimaryActionUpdate" action="AddBuff" buff="buffNVGDeactivate"/>
+	</effect_group>
+	</set> -->
+<!-- *********************************************************************************************************************************************** -->	
+	
+		<!-- FLASHLIGHT DEGRADATION -->
+<set xpath="/items/item[@name='meleeToolFlashlight02']/effect_group[@tiered='false']/@tiered">true</set>
+<append xpath="/items/item[@name='meleeToolFlashlight02']/property[@name='Tags']/@value">,batteryDegradation</append>
+<append xpath="//item[@name='meleeToolFlashlight02']/effect_group[@name='meleeToolFlashlight02']">
+		<triggered_effect trigger="onSelfEnteredGame" action="AddBuff" buff="buffFlashLightDeactivate"/>
+		<triggered_effect trigger="onSelfItemActivate" action="AddBuff" buff="buffFlashLightActivate"/>
+		<triggered_effect trigger="onSelfItemDeactivate" action="RemoveBuff" buff="buffFlashLightActive"/>
+		<triggered_effect trigger="onSelfEquipStop" action="RemoveBuff" buff="buffFlashLightActive"/>
+</append>
+<append xpath="/items/item[@name='meleeToolFlashlight02']">
+		<property name="EconomicValue" value="45"/>	
+		<property name="UnlimitedRepairs" value="false"/>
+		<property name="ShowQuality" value="true"/>
+		<property name="RepairTools" value="resourceRepairKit"/>	
+		<property name="LightValue" value=".40"/>
+	<effect_group>
+			<passive_effect name="DegradationMax" operation="base_set" value="800,4000" tier="1,6"/>
+			<passive_effect name="DegradationPerUse" operation="base_set" value="5"/>
+	</effect_group>
+	<effect_group>
+			<requirement name="HoldingItemBroken"/>
+			<triggered_effect trigger="onSelfPrimaryActionUpdate" action="SetTransformActive" active="false" parent_transform="#HeldItemRoot" transform_path="lightSource"/>
+			<triggered_effect trigger="onSelfPrimaryActionUpdate" action="RemoveBuff" buff="buffHeldLight"/>
+			<triggered_effect trigger="onSelfPrimaryActionUpdate" action="AddBuff" buff="buffFlashLightDeactivate"/>
+	</effect_group>
+</append>
+<!-- *********************************************************************************************************************************************** -->
+		
+		<!-- CANDLE DEGRADATION -->
+	
+<set xpath="//item[@name='candle']//effect_group[@name='light/douse always']">
+		<triggered_effect trigger="onSelfWaterSubmerge" action="RemoveParticleEffectFromEntity" particle="p_candle_firstperson" parent_transform=".item"/>
+		<triggered_effect trigger="onSelfWaterSurface" action="AttachParticleEffectToEntity" particle="p_candle_firstperson" parent_transform=".item">
+			<requirement name="CVarCompare" cvar="batteryNVG" operation="GT" value="0"/>
+		</triggered_effect>
+		<triggered_effect trigger="onSelfEquipStart" action="AttachParticleEffectToEntity" particle="p_candle_firstperson" parent_transform=".item">
+			<requirement name="CVarCompare" cvar="_underwater" operation="LT" value="1"/>
+			<requirement name="CVarCompare" cvar="batteryNVG" operation="GT" value="0"/>
+		</triggered_effect>
+		<triggered_effect trigger="onSelfEquipStart" action="RemoveParticleEffectFromEntity" particle="p_candle_firstperson" parent_transform=".item">
+			<requirement name="CVarCompare" cvar="_underwater" operation="GTE" value="1"/>
+			<requirement name="CVarCompare" cvar="batteryNVG" operation="LTE" value="0"/>
+		</triggered_effect>
+</set>	
+
+<set xpath="/items/item[@name='candle']/effect_group[@tiered='false']/@tiered">true</set>
+<append xpath="/items/item[@name='candle']/property[@name='Tags']/@value">,batteryDegradation</append>
+<append xpath="//item[@name='candle']">
+	<property name="Class" value="ItemClassTorch"/>
+	<property name="HoldType" value="12"/>
+	<property name="Meshfile" value="@:Other/Items/Tools/candlePrefab.prefab"/>
+	<property name="Material" value="Morganic"/>
+	<property name="Stacknumber" value="50"/> <!-- STK torch -->
+	<property name="EconomicValue" value="20"/>
+	<property name="UnlimitedRepairs" value="false"/>
+	<property name="ShowQuality" value="true"/>	
+	<property name="DegradationTags" value="batteryDegradation"/>	
+	<property name="RepairTools" value="resourceYuccaFibers"/>	
+		
+	<property class="Action0">
+	<property name="Class" value="DynamicMelee"/>
+	<property name="Sphere" value=".1"/>
+	<property name="DamageType" value="Heat"/>
+	<property name="UseGrazingHits" value="false"/>
+	<property name="GrazeStart" value=".3"/>
+	<property name="GrazeEnd" value=".35"/>
+	<property name="SwingDegrees" value="65"/>
+	<property name="SwingAngle" value="90"/>
+	</property>
+	
+	<property class="Action1">
+		<property name="Class" value="DynamicMelee"/>
+		<property name="Range" value="2"/>
+		<property name="Sphere" value=".05"/>
+		<property name="UsePowerAttackAnimation" value="false"/>
+	</property>	
+	<effect_group>
+			<passive_effect name="DegradationMax" operation="base_set" value="5000"/>	
+			<passive_effect name="DegradationPerUse" operation="base_set" value="300"/>
+	</effect_group>
+	<effect_group>
+		<triggered_effect trigger="onSelfEquipStart" action="ModifyHoldingItemDurability, DurabilityOverhaul" item_tags="batteryDegradation" active_only="false" value="-100"/>
+		<triggered_effect trigger="onSelfEquipStart" action="AddBuff" buff="buffNVGActive"/>
+		<triggered_effect trigger="onSelfEquipStop" action="RemoveBuff" buff="buffNVGActive"/>
+	</effect_group>	
+	<effect_group>
+			<requirement name="HoldingItemBroken"/>
+			<triggered_effect trigger="onSelfPrimaryActionUpdate" action="RemoveParticleEffectFromEntity" particle="p_candle_firstperson" parent_transform=".item"/>
+			<triggered_effect trigger="onSelfPrimaryActionUpdate" action="RemoveBuff" buff="buffNVGActive"/>
+	</effect_group>
+</append>
+
+<append xpath="//item[@name='candle']">
+		<effect_group name="add or remove flames/fuel check" tiered="false">		
+			<triggered_effect trigger="onSelfEnteredGame" action="RemoveBuff" buff="buffNVGActive"/>
+			<triggered_effect trigger="onSelfEquipStart" action="AddBuff" buff="buffNVGActive"/>
+			<triggered_effect trigger="onSelfEquipStop" action="RemoveBuff" buff="buffNVGActive"/>
+		</effect_group> 
+</append>
+<!-- *********************************************************************************************************************************************** -->	
+		
+		<!-- TORCH DEGRADATION -->
+<!-- <set xpath="/items/item[@name='meleeToolTorch']/effect_group[@tiered='false']/@tiered">true</set> -->
+<set xpath="//item[@name='meleeToolTorch']/effect_group[@name='meleeToolTorch']//passive_effect[@name='StaminaLoss']/@value">10</set>
+<set xpath="//item[@name='meleeToolTorch']//property[@class='Action1']">
+		<property name="Class" value="DynamicMelee"/>
+		<property name="Sound_start" value="torch_swoosh"/>
+		<property name="Sphere" value=".15"/>
+		<property name="ToolCategory.harvestingTools" value=".5" param1="1"/>
+		<property name="UsePowerAttackAnimation" value="true"/>
+		<property name="UseGrazingHits" value="true"/>
+		<property name="IsHorizontalSwing" value="true"/>
+		<property name="GrazeStart" value=".25"/>
+		<property name="GrazeEnd" value=".32"/>
+		<property name="SwingDegrees" value="120"/>
+		<property name="SwingAngle" value="90"/>
+	<!--	<property class="HitSounds">
+			<property name="Override0" value="organic" param1="woodhitorganic"/>
+		</property>
+		<property class="GrazeSounds">
+			<property name="Override0" value="organic" param1="woodgrazeorganic"/>
+		</property> -->
+</set>
+<insertafter xpath="//item[@name='meleeToolTorch']//effect_group[@name='meleeToolTorch']">
+	<effect_group name="Power Attack" tiered="false">
+		<passive_effect name="EntityDamage" operation="base_add" value="6.05" tags="secondary"/>
+		<passive_effect name="EntityDamage" operation="perc_add" value=".334" tags="secondary"/>
+		<passive_effect name="BlockDamage" operation="base_add" value="4.05" tags="secondary"/>
+		<passive_effect name="BlockDamage" operation="perc_add" value=".334" tags="secondary"/>
+		<passive_effect name="StaminaLoss" operation="base_set" value="15" tags="secondary"/>
+	</effect_group>
+</insertafter>
+<set xpath="//item[@name='meleeToolTorch']//effect_group[@name='light/douse torch flame']">
+		<triggered_effect trigger="onSelfWaterSubmerge" action="RemoveParticleEffectFromEntity" particle="torch02_firePrefab" parent_transform="TorchLight"/>
+		<triggered_effect trigger="onSelfWaterSurface" action="AttachParticleEffectToEntity" particle="torch02_firePrefab" parent_transform="TorchLight">
+			<requirement name="CVarCompare" cvar="batteryHandTorch" operation="GT" value="0"/>
+		</triggered_effect>
+		<triggered_effect trigger="onSelfEquipStart" action="AttachParticleEffectToEntity" particle="torch02_firePrefab" parent_transform="TorchLight">
+			<requirement name="CVarCompare" cvar="_underwater" operation="LT" value="1"/>
+			<requirement name="CVarCompare" cvar="batteryHandTorch" operation="GT" value="0"/>
+		</triggered_effect>
+		<triggered_effect trigger="onSelfEquipStart" action="RemoveParticleEffectFromEntity" particle="torch02_firePrefab" parent_transform="TorchLight">
+			<requirement name="CVarCompare" cvar="_underwater" operation="GTE" value="1"/>
+			<requirement name="CVarCompare" cvar="batteryHandTorch" operation="LTE" value="0"/>
+		</triggered_effect>
+</set>
+<set xpath="/items/item[@name='meleeToolTorch']/property[@name='Tags']/@value">,batteryDegradation</set>
+<append xpath="//item[@name='meleeToolTorch']">
+		<property name="EconomicValue" value="45"/>
+		<property name="UnlimitedRepairs" value="false"/>
+		<property name="ShowQuality" value="true"/>
+		<property name="DegradationTags" value="batteryDegradation"/>
+		<property name="RepairTools" value="resourceWoodScraps"/>
+		<property name="LightValue" value=".32"/>
+	<effect_group>	
+			<passive_effect name="DegradationMax" operation="base_set" value="5000"/>
+			<passive_effect name="DegradationPerUse" operation="base_set" value="300"/>
+	</effect_group>	
+	<effect_group>
+		<triggered_effect trigger="onSelfEquipStart" action="ModifyHoldingItemDurability, DurabilityOverhaul" item_tags="batteryDegradation" active_only="false" value="-50"/>
+		<triggered_effect trigger="onSelfEquipStart" action="AddBuff" buff="buffHeldTorch"/>
+		<triggered_effect trigger="onSelfEquipStop" action="RemoveBuff" buff="buffHeldTorch"/>
+	</effect_group>	
+	<effect_group>
+			<requirement name="HoldingItemBroken"/>
+			<triggered_effect trigger="onSelfPrimaryActionUpdate" action="RemoveParticleEffectFromEntity" particle="torch02_firePrefab" active="false" parent_transform="#HeldItemRoot" transform_path="TorchLight"/>
+			<triggered_effect trigger="onSelfPrimaryActionUpdate" action="RemoveBuff" buff="buffHeldTorch"/>
+			<triggered_effect trigger="onSelfPrimaryActionUpdate" action="RemoveBuff" buff="buffHandTorchActive"/>
+	</effect_group>
+</append>
+<append xpath="//item[@name='meleeToolTorch']">
+		<effect_group name="add or remove flames/fuel check" tiered="false">		
+			<triggered_effect trigger="onSelfEnteredGame" action="RemoveBuff" buff="buffHandTorchActive"/>
+			<triggered_effect trigger="onSelfEnteredGame" action="RemoveBuff" buff="buffHeldTorch"/>
+			<triggered_effect trigger="onSelfEquipStart" action="AddBuff" buff="buffHandTorchActive"/>
+			<triggered_effect trigger="onSelfEquipStop" action="RemoveBuff" buff="buffHandTorchActive"/>
+			<triggered_effect trigger="onSelfEquipStop" action="RemoveBuff" buff="buffHandTorch"/>
+		</effect_group> 
+</append>
+<!-- *********************************************************************************************************************************************** -->
+		<!-- CLOTHING DEGRADATION -->
+	
+	<append xpath="/items/item[starts-with(@name,'apparel') and not ( (contains(@name,'Master')) or (@name='apparelFacialPiercings') )]">
+		<property name="ClothingDegradation"/>
+	</append>
+	<setattribute xpath="/items/item[starts-with(@name,'apparel')]/effect_group/passive_effect[@name='HypothermalResist' or @name='HyperthermalResist']" name="tier">1,6</setattribute>
+	<insertAfter xpath="/items//property[@name='ClothingDegradation']">
+		<property name="ShowQuality" value="true"/>
+		<property name="ShowBreakTooltip" value="true"/>
+		<property name="RepairTools" value="resourceRepairKit"/>
+		<effect_group tiered="true">
+			<passive_effect name="DegradationMax" operation="base_set" value="150,450" tier="1,6"/>
+		</effect_group>
+	</insertAfter>
+
+	<append xpath="/items/item[@name='bookAutoWeaponsDrumMag']">
+		<effect_group tiered="false">
+			<triggered_effect trigger="onSelfPrimaryActionStart" action="ModifyCVar" cvar="modGunDrumMagazineExtender" operation="add" value="1"/>
+		</effect_group>
+	</append>
+	<append xpath="/items/item[@name='bookArtOfMiningDiamondTools']">
+		<effect_group tiered="false">
+			<triggered_effect trigger="onSelfPrimaryActionStart" action="ModifyCVar" cvar="modMeleeDiamondTip" operation="add" value="1"/>
+		</effect_group>
+	</append>
+	<append xpath="/items/item[@name='bookTechJunkie5Repulsor']">
+		<effect_group tiered="false">
+			<triggered_effect trigger="onSelfPrimaryActionStart" action="ModifyCVar" cvar="modMeleeStunBatonRepulsor" operation="add" value="1"/>
+		</effect_group>
+	</append>
+	<append xpath="/items/item[@name='bookShotgunMessiahMagazine']">
+		<effect_group tiered="false">
+			<triggered_effect trigger="onSelfPrimaryActionStart" action="ModifyCVar" cvar="modGunShotgunTubeExtenderMagazine" operation="add" value="1"/>
+		</effect_group>
+	</append>
+	<append xpath="/items/item[@name='bookBatterUpMetalChain']">
+		<effect_group tiered="false">
+			<triggered_effect trigger="onSelfPrimaryActionStart" action="ModifyCVar" cvar="modMeleeClubMetalChain" operation="add" value="1"/>
+		</effect_group>
+	</append>
+	<append xpath="/items/item[@name='bookFiremansAlmanacAxes']">
+		<effect_group tiered="false">
+			<triggered_effect trigger="onSelfPrimaryActionStart" action="ModifyCVar" cvar="modMeleeFiremansAxeMod" operation="add" value="1"/>
+		</effect_group>
+	</append>
+	<append xpath="/items/item[@name='bookNeedleAndThreadWinterWear']">
+		<effect_group tiered="false">
+			<triggered_effect trigger="onSelfPrimaryActionStart" action="ModifyCVar" cvar="apparelFlannelShirt" operation="add" value="1"/>
+			<triggered_effect trigger="onSelfPrimaryActionStart" action="ModifyCVar" cvar="apparelSweatshirt" operation="add" value="1"/>
+			<triggered_effect trigger="onSelfPrimaryActionStart" action="ModifyCVar" cvar="apparelSkullCap" operation="add" value="1"/>
+			<triggered_effect trigger="onSelfPrimaryActionStart" action="ModifyCVar" cvar="apparelBandana" operation="add" value="1"/>
+		</effect_group>
+	</append>
+	<append xpath="/items/item[@name='bookNeedleAndThreadLegwear']">
+		<effect_group tiered="false">
+			<triggered_effect trigger="onSelfPrimaryActionStart" action="ModifyCVar" cvar="apparelDenimPants" operation="add" value="1"/>
+			<triggered_effect trigger="onSelfPrimaryActionStart" action="ModifyCVar" cvar="apparelOveralls" operation="add" value="1"/>
+			<triggered_effect trigger="onSelfPrimaryActionStart" action="ModifyCVar" cvar="apparelSkirt" operation="add" value="1"/>
+		</effect_group>
+	</append>
+	<append xpath="/items/item[@name='bookNeedleAndThreadFootwear']">
+		<effect_group tiered="false">
+			<triggered_effect trigger="onSelfPrimaryActionStart" action="ModifyCVar" cvar="apparelWornBoots" operation="add" value="1"/>
+			<triggered_effect trigger="onSelfPrimaryActionStart" action="ModifyCVar" cvar="apparelRunningShoesRegular" operation="add" value="1"/>
+			<triggered_effect trigger="onSelfPrimaryActionStart" action="ModifyCVar" cvar="apparelCowboyBoots" operation="add" value="1"/>
+			<triggered_effect trigger="onSelfPrimaryActionStart" action="ModifyCVar" cvar="apparelSuitDressShoes" operation="add" value="1"/>
+		</effect_group>
+	</append>
+	<append xpath="/items/item[@name='bookNeedleAndThreadDesertWear']">
+		<effect_group tiered="false">
+			<triggered_effect trigger="onSelfPrimaryActionStart" action="ModifyCVar" cvar="apparelTankTop" operation="add" value="1"/>
+			<triggered_effect trigger="onSelfPrimaryActionStart" action="ModifyCVar" cvar="apparelTShirtPlain" operation="add" value="1"/>
+			<triggered_effect trigger="onSelfPrimaryActionStart" action="ModifyCVar" cvar="apparelCowboyHat" operation="add" value="1"/>
+			<triggered_effect trigger="onSelfPrimaryActionStart" action="ModifyCVar" cvar="apparelDenimShortsPants" operation="add" value="1"/>
+			<triggered_effect trigger="onSelfPrimaryActionStart" action="ModifyCVar" cvar="apparelBallCap" operation="add" value="1"/>
+			<triggered_effect trigger="onSelfPrimaryActionStart" action="ModifyCVar" cvar="apparelCoatLeatherPoncho" operation="add" value="1"/>
+		</effect_group>
+	</append>
+	<append xpath="/items/item[@name='bookNeedleAndThreadDusters']">
+		<effect_group tiered="false">
+			<triggered_effect trigger="onSelfPrimaryActionStart" action="ModifyCVar" cvar="apparelCoatLeatherDuster" operation="add" value="1"/>
+		</effect_group>
+	</append>
+	<append xpath="/items/item[@name='bookNeedleAndThreadPufferCoats']">
+		<effect_group tiered="false">
+			<triggered_effect trigger="onSelfPrimaryActionStart" action="ModifyCVar" cvar="apparelCoatPufferCoat" operation="add" value="1"/>
+		</effect_group>
+	</append>
+<!-- *********************************************************************************************************************************************** -->	
+</Faw>

@@ -1,0 +1,363 @@
+<Faw>
+
+<remove xpath="//item_modifier[@name='modGunFlashlight']"/>
+<remove xpath="//item_modifier[@name='modArmorHelmetLight']"/>	
+	
+	<append xpath="//item_modifiers">
+		<item_modifier name="modGunFlashlight" installable_tags="sideAttachments" modifier_tags="sideAttachment" blocked_tags="noMods" type="attachment">
+			<property name="EconomicValue" value="60"/>
+			<property name="Extends" value="modGeneralMaster" param1="CustomIcon"/>
+			<property name="UnlockedBy" value="modGunFlashlightSchematic"/>
+			<property name="TraderStageTemplate" value="modsTier1"/>
+			<property name="LightValue" value=".35"/>
+			<property name="Material" value="Mplastics"/>
+
+		<item_property_overrides name="gunHandgunT1Pistol">
+			<property name="SideOffset" value="0,.0198,.0475"/>
+			<property name="SideScale" value=".75,.75,.75"/>
+		</item_property_overrides>
+
+		<item_property_overrides name="gunShotgunT0Blunderbuss">
+			<property name="SideOffset" value="0,-.026,.27"/>
+		</item_property_overrides>
+
+		<item_property_overrides name="gunShotgunT1DoubleBarrel">
+			<property name="SideOffset" value="0,-.03,.066"/>
+			<property name="SideScale" value=".4,.4,.4"/>
+		</item_property_overrides>
+
+		<item_property_overrides name="gunShotgunT2PumpShotgun">
+			<property name="SideOffset" value="0,0,.41"/>
+			<property name="SideScale" value="1.12,1.12,1.12"/>
+		</item_property_overrides>
+
+		<item_property_overrides name="gunMGT1AK47">
+			<property name="SideOffset" value="0,0,.28"/>
+			<property name="SideScale" value="1,1,1"/>
+		</item_property_overrides>
+
+		<item_property_overrides name="gunMGT2TacticalAR">
+			<property name="SideOffset" value="0,0.0,0.23"/>
+			<property name="SideScale" value="1,1,1"/>
+		</item_property_overrides>
+
+		<item_property_overrides name="gunMGT3M60">
+			<property name="SideOffset" value="-.0386,.0382,.3519"/>
+			<property name="SideRotation" value="0,0,-90"/>
+			<property name="SideScale" value="1,1,1"/>
+		</item_property_overrides>
+
+		<item_property_overrides name="gunHandgunT2Magnum44">
+			<property name="SideOffset" value="0,.0621,.095"/>
+			<property name="SideScale" value=".75,.75,.75"/>
+		</item_property_overrides>
+
+		<item_property_overrides name="gunHandgunT3SMG5">
+			<property name="SideOffset" value="0,.0065,0"/>
+			<property name="SideScale" value="1.5,1.5,1.5"/>
+		</item_property_overrides>
+
+		<item_property_overrides name="gunRifleT1HuntingRifle">
+			<property name="SideOffset" value="0,.0061,.2455"/>
+			<property name="SideScale" value="1,1,1"/>
+		</item_property_overrides>
+
+		<item_property_overrides name="gunRifleT2LeverActionRifle">
+			<property name="SideOffset" value="0,-.0025,.175"/>
+			<property name="SideScale" value="1.12,1.12,1.12"/>
+		</item_property_overrides>
+
+		<item_property_overrides name="gunExplosivesT3RocketLauncher">
+			<property name="SideOffset" value=".037,-.1,.16"/>
+			<property name="SideScale" value="1,1,1"/>
+			<property name="SideRotation" value="0,0,20"/>
+		</item_property_overrides>
+
+		<item_property_overrides name="gunBowT1IronCrossbow">
+			<property name="SideOffset" value="0,-.038,.32"/>
+			<property name="SideScale" value="1,1,1"/>
+			<property name="SideRotation" value="0,0,0"/>
+		</item_property_overrides>
+		<item_property_overrides name="gunBowT3CompoundCrossbow">
+			<property name="SideOffset" value="0,0,.32"/>
+			<property name="SideScale" value="1,1,1"/>
+		</item_property_overrides>
+
+		<!-- visible attachment: flashlight -->
+		<effect_group tiered="false" name="external attachment prefab (old way)">
+			<requirement name="!HoldingItemHasTags" tags="attachmentsIncluded"/>
+				<triggered_effect trigger="onSelfHoldingItemCreated" action="AttachPrefabToHeldItem" prefab="@:Other/Items/Mods/Sides/side_attachment_flashlightPrefab.prefab" parent_transform="Attachments/Side"/>
+				<triggered_effect trigger="onSelfItemActivate" action="SetTransformActive" active="true" parent_transform="Side" transform_path="lightSource"/>
+				<triggered_effect trigger="onSelfItemDeactivate" action="SetTransformActive" active="false" parent_transform="Side" transform_path="lightSource"/>
+				<triggered_effect trigger="onSelfEquipStop" action="SetTransformActive" active="false" parent_transform="Side" transform_path="lightSource"/>
+		</effect_group>
+		<effect_group tiered="false" name="internal attachment prefab (A19)">
+			<requirement name="HoldingItemHasTags" tags="attachmentsIncluded"/>
+				<triggered_effect trigger="onSelfHoldingItemCreated" action="SetTransformActive" active="true" parent_transform="#HeldItemRoot" transform_path="flashlight"/>
+
+				<triggered_effect trigger="onSelfItemActivate" action="SetTransformActive" active="true" parent_transform="Gunjoint" transform_path="flashlight_lightSource"/>
+				<triggered_effect trigger="onSelfItemDeactivate" action="SetTransformActive" active="false" parent_transform="Gunjoint" transform_path="flashlight_lightSource"/>
+				<triggered_effect trigger="onSelfEquipStop" action="SetTransformActive" active="false" parent_transform="Gunjoint" transform_path="flashlight_lightSource"/>
+		</effect_group>
+	</item_modifier>
+		
+	<item_modifier name="modArmorHelmetLight" installable_tags="head" modifier_tags="misc,modArmorHelmetLight" blocked_tags="noMods,clothing" type="attachment">
+		<property name="EconomicValue" value="20"/>
+		<property name="Extends" value="modGeneralMaster" param1="CustomIcon"/>
+		<property name="UnlockedBy" value="modArmorHelmetLightSchematic"/>
+		<property name="TraderStageTemplate" value="modsTier1"/>
+		<property name="Material" value="Msteel"/>
+		<property name="LightValue" value=".4"/>
+		<effect_group tiered="false">
+			<triggered_effect trigger="onSelfEquipStart" action="AddPart" part="HeadLight" prefab="Entities/Lighting/miningHelmetLightSource" parentTransform="Spotlight" localPos="0,0,0" localRot="90,0,0"/>
+			<triggered_effect trigger="onSelfEquipStart" action="AddPart" part="HeadLightCam" prefab="Entities/Lighting/miningHelmetLightSource" parentTransform="CameraNode" localPos="0,0,0" localRot="-90,0,0"/>
+			<triggered_effect trigger="onSelfEquipStop" action="RemovePart" part="HeadLight"/>
+			<triggered_effect trigger="onSelfEquipStop" action="RemovePart" part="HeadLightCam"/>
+			<triggered_effect trigger="onSelfItemActivate" action="SetPartActive" part="HeadLight" active="@!.IsFPV"/>
+			<triggered_effect trigger="onSelfItemActivate" action="SetPartActive" part="HeadLightCam" active="@.IsFPV"/>
+			<triggered_effect trigger="onSelfItemDeactivate" action="SetPartActive" part="HeadLight" active="false"/>
+			<triggered_effect trigger="onSelfItemDeactivate" action="SetPartActive" part="HeadLightCam" active="false"/>
+		</effect_group>
+	</item_modifier>
+</append>
+<!-- ******************************************************************************************************************************************************************************************************************* -->
+
+		<!-- MOD DEGRADATION -->		
+	<set xpath="/item_modifiers/item_modifier[starts-with(@name, 'modMelee') or (starts-with(@name, 'modGun')) or (starts-with(@name, 'modArmorPlating')) or (@name='modShotgunSawedOffBarrel') or (@name='modArmorHelmetLight')]/effect_group[@tiered='false']/@tiered">true</set>	
+	
+	<append xpath="/item_modifiers/item_modifier[starts-with(@name, 'modMelee')]">
+		<property name="ShowQuality" value="true"/>
+		<property name="DegradationTags" value="modMeleeDegradation"/>
+		<property name="DegradationMax" value="2000"/>		
+		<property name="RepairTools" value="resourceRepairKit"/>
+	</append>
+	
+	<append xpath="/item_modifiers/item_modifier[starts-with(@name, 'modGunMelee')]">
+		<property name="ShowQuality" value="true"/>
+		<property name="DegradationTags" value="modGunDegradation,modMeleeDegradation"/>
+		<property name="RepairTools" value="resourceRepairKit"/>
+	</append>
+	
+	<append xpath="/item_modifiers/item_modifier[starts-with(@name, 'modGun') or starts-with(@name, 'modShotgunSawedOffBarrel')]">
+		<property name="ShowQuality" value="true"/>
+		<property name="DegradationTags" value="modGunDegradation"/>
+		<property name="DegradationMax" value="2000"/>	
+		<property name="RepairTools" value="resourceRepairKit"/>
+	</append>
+	
+	<append xpath="/item_modifiers/item_modifier[contains(@name,'Magazine')]">
+		<property name="ShowQuality" value="true"/>
+		<property name="DegradationTags" value="modGunDegradation,magazine"/>
+		<property name="RepairTools" value="resourceRepairKit"/>
+	</append>
+	
+	<append xpath="/item_modifiers/item_modifier[starts-with(@name, 'modArmorPlating')]">
+		<property name="ShowQuality" value="true"/>
+		<property name="DegradationMax" value="2000"/>
+		<property name="RepairTools" value="resourceRepairKit"/>
+	</append>
+
+<!-- ******************************************************************************************************************************************************************************************************************* -->	
+	
+		<!-- *** LASER SIGHT *** -->
+	<set xpath="//item_modifier[@name='modGunLaserSight']//effect_group[@name='external attachment prefab (old way)']">
+		<requirement name="!HoldingItemHasTags" tags="attachmentsIncluded"/>
+		<triggered_effect trigger="onSelfItemDeactivate" action="SetTransformChildrenActive" active="false" parent_transform="Side" transform_path="gun_laser"/>
+		<triggered_effect trigger="onSelfEquipStop" action="SetTransformChildrenActive" active="false" parent_transform="Side" transform_path="gun_laser"/>
+		<triggered_effect trigger="onSelfEnteredGame" action="AddBuff" buff="buffLaserLightDeactivate"/>
+		<triggered_effect trigger="onSelfItemActivate" action="AddBuff" buff="buffLaserLightActivate"/>
+		<triggered_effect trigger="onSelfItemDeactivate" action="RemoveBuff" buff="buffLaserLightActive"/>
+		<triggered_effect trigger="onSelfEquipStop" action="RemoveBuff" buff="buffLaserLightActive"/>
+	</set>
+	
+	<set xpath="//item_modifier[@name='modGunLaserSight']//effect_group[@name='internal attachment prefab (A19)']">
+		<requirement name="HoldingItemHasTags" tags="attachmentsIncluded"/>
+		<triggered_effect trigger="onSelfItemDeactivate" action="SetTransformActive" active="false" parent_transform="Side" transform_path="gunlaser"/>
+		<triggered_effect trigger="onSelfEquipStop" action="SetTransformActive" active="false" parent_transform="Side" transform_path="gunlaser"/>
+		<triggered_effect trigger="onSelfEnteredGame" action="AddBuff" buff="buffLaserLightDeactivate"/>
+		<triggered_effect trigger="onSelfItemActivate" action="AddBuff" buff="buffLaserLightActive"/>
+		<triggered_effect trigger="onSelfItemDeactivate" action="RemoveBuff" buff="buffLaserLightActive"/>
+		<triggered_effect trigger="onSelfEquipStop" action="RemoveBuff" buff="buffLaserLightActive"/>
+	</set>
+	<set xpath="//item_modifier[@name='modGunLaserSight']//effect_group[@name='mod effects']">
+		<requirement name="HasBuff" buff="buffLaserLightActive"/>
+		<passive_effect name="SpreadMultiplierHip" operation="perc_add" value="-.2"/>
+		<passive_effect name="WeaponHandling" operation="perc_add" value=".2"/>
+	</set>
+	
+	<append xpath="/item_modifiers/item_modifier[@name='modGunLaserSight']">
+		<property name="DegradationMax" value="800,8000"/>
+		<property name="RepairTools" value="resourceRepairKit"/>
+		<property name="DegradationTags" value="batteryDegradation"/>
+		<property name="UnlimitedRepairs" value="false"/>		
+		<effect_group>
+			<requirement name="HoldingItemModBroken, DurabilityOverhaul" mod_name="modGunLaserSight"/>
+			<triggered_effect trigger="onSelfPrimaryActionUpdate" action="SetTransformActive" active="false" parent_transform="gunlaser" transform_path="gunlaser"/>
+			<triggered_effect trigger="onSelfPrimaryActionUpdate" action="SetTransformChildrenActive" active="false" parent_transform="Side" transform_path="gun_laser"/>
+			<triggered_effect trigger="onSelfPrimaryActionUpdate" action="RemoveBuff" buff="buffLaserLightActive"/>
+		</effect_group>	
+	</append>
+<!-- ******************************************************************************************************************************************************************************************************************* -->	
+		
+		<!-- *** WEAPON FLASHLIGHT *** -->
+	<set xpath="//item_modifier[@name='modGunFlashlight']//effect_group[@name='external attachment prefab (old way)']">
+		<requirement name="!HoldingItemHasTags" tags="attachmentsIncluded"/>
+		<triggered_effect trigger="onSelfItemDeactivate" action="SetTransformActive" active="false" parent_transform="Side" transform_path="lightSource"/>
+		<triggered_effect trigger="onSelfEquipStop" action="SetTransformActive" active="false" parent_transform="Side" transform_path="lightSource"/>
+	<!--	<triggered_effect trigger="onSelfEnteredGame" action="AddBuff" buff="buffWeaponLightDeactivate"/> -->
+		<triggered_effect trigger="onSelfItemActivate" action="AddBuff" buff="buffWeaponLightActive"/>
+		<triggered_effect trigger="onSelfItemDeactivate" action="RemoveBuff" buff="buffWeaponLightActive"/>
+		<triggered_effect trigger="onSelfEquipStop" action="RemoveBuff" buff="buffWeaponLightActive"/>
+	</set>
+	<set xpath="//item_modifier[@name='modGunFlashlight']//effect_group[@name='internal attachment prefab (A19)']">
+		<requirement name="HoldingItemHasTags" tags="attachmentsIncluded"/>
+		<triggered_effect trigger="onSelfItemDeactivate" action="SetTransformActive" active="false" parent_transform="Gunjoint" transform_path="flashlight_lightSource"/>
+		<triggered_effect trigger="onSelfEquipStop" action="SetTransformActive" active="false" parent_transform="Gunjoint" transform_path="flashlight_lightSource"/>
+	<!--	<triggered_effect trigger="onSelfEnteredGame" action="AddBuff" buff="buffWeaponLightDeactivate"/> -->
+		<triggered_effect trigger="onSelfItemActivate" action="AddBuff" buff="buffWeaponLightActive"/>
+		<triggered_effect trigger="onSelfItemDeactivate" action="RemoveBuff" buff="buffWeaponLightActive"/>
+		<triggered_effect trigger="onSelfEquipStop" action="RemoveBuff" buff="buffWeaponLightActive"/>
+	</set>
+	
+	<append xpath="/item_modifiers/item_modifier[@name='modGunFlashlight']">
+		<property name="EconomicValue" value="50"/>
+		<property name="DegradationMax" value="400,4000"/>
+		<property name="RepairTools" value="resourceRepairKit"/>
+		<property name="DegradationTags" value="batteryDegradation"/>
+		<property name="UnlimitedRepairs" value="false"/>
+		<effect_group>
+			<requirement name="HoldingItemModBroken, DurabilityOverhaul" mod_name="modGunFlashlight"/>
+			<triggered_effect trigger="onSelfPrimaryActionUpdate" action="SetTransformActive" active="false" parent_transform="Gunjoint" transform_path="flashlight_lightSource"/>
+			<triggered_effect trigger="onSelfPrimaryActionUpdate" action="SetTransformActive" active="false" parent_transform="Side" transform_path="lightSource"/>
+			<triggered_effect trigger="onSelfPrimaryActionUpdate" action="RemoveBuff" buff="buffGunFlashlight"/>
+			<triggered_effect trigger="onSelfPrimaryActionUpdate" action="RemoveBuff" buff="buffWeaponLightActive"/>
+		</effect_group>	
+	</append>
+<!-- ******************************************************************************************************************************************************************************************************************* -->	
+	<!-- *** BURNING SHAFT *** -->
+	<set xpath="//item_modifier[@name='modMeleeClubBurningShaft']//effect_group[@name='light/douse torch always']">
+		<!-- <triggered_effect trigger="onSelfWaterSurface" action="AddPart" part="Flames" prefab="property?FlameEffect" parentTransform="#HeldItemRoot"/> -->
+		<triggered_effect trigger="onSelfEnteredGame" action="RemoveBuff" buff="buffBurningShaftActive"/>
+		<triggered_effect trigger="onSelfEnteredGame" action="AddBuff" buff="buffBurningShaftDeactivate"/>
+		<triggered_effect trigger="onSelfItemActivate" action="AddBuff" buff="buffBurningShaftActive"/>
+		<triggered_effect trigger="onSelfEquipStart" action="AddBuff" buff="buffBurningShaftActive"/>
+		<triggered_effect trigger="onSelfItemDeactivate" action="RemoveBuff" buff="buffBurningShaftActive"/>
+		<triggered_effect trigger="onSelfItemDeactivate" action="RemoveBuff" buff="buffBurningShaft"/>
+		<triggered_effect trigger="onSelfEquipStop" action="RemoveBuff" buff="buffBurningShaftActive"/>
+		<triggered_effect trigger="onSelfWaterSubmerge" action="RemovePart" part="Flames"/>
+		<triggered_effect trigger="onSelfEquipStop" action="RemovePart" part="Flames"/>
+		<triggered_effect trigger="onSelfDied" action="RemovePart" part="Flames"/>		
+	</set>	
+	<set xpath="//item_modifier[@name='modMeleeClubBurningShaft']//effect_group[@name='new Fire Proc']">
+		<requirement name="CVarCompare" cvar="_underwater" operation="LT" value=".93"/>
+		<requirement name="RandomRoll" seed_type="Random" target="self" min_max="0,100" operation="LTE" value="30"/>
+		<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" buff="buffBurningElement">
+			<requirement name="HasBuff" buff="buffBurningShaftActive"/></triggered_effect>
+		<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="$buffBurningElementDuration" operation="set" value="10">
+			<requirement name="ProgressionLevel" progression_name="perkFiremansAlmanacMolotov" operation="Equals" value="0"/></triggered_effect>
+		<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="$buffBurningElementDuration" operation="set" value="11">
+			<requirement name="ProgressionLevel" progression_name="perkFiremansAlmanacMolotov" operation="Equals" value="1"/></triggered_effect>
+	</set>
+	
+	<append xpath="/item_modifiers/item_modifier[@name='modMeleeClubBurningShaft']"> 
+		<property name="DegradationTags" value="modMeleeDegradation"/>
+		<property name="ShowQuality" value="true"/>
+		<property name="RepairTools" value="resourceRepairKit"/>		
+		<property name="EconomicValue" value="50"/>
+		<property name="UnlimitedRepairs" value="false"/>
+		<property name="DegradationMax" value="300"/>		
+		<property name="DegradationPerUse" value=".5"/>				
+
+	<effect_group>
+		<triggered_effect trigger="onSelfEquipStart" action="ModifyHoldingItemModDurability, DurabilityOverhaul" mod_tags="modMeleeDegradation" active_only="false" value="-2"/>
+	</effect_group>
+	<effect_group>	
+		<requirement name="HoldingItemModBroken, DurabilityOverhaul" mod_name="modMeleeClubBurningShaft"/>
+		<triggered_effect trigger="onSelfPrimaryActionUpdate" action="RemovePart" part="Flames" active="false" parent_transform="#HeldItemRoot" transform_path="lightSource" />
+		<triggered_effect trigger="onSelfPrimaryActionUpdate" action="RemoveBuff" buff="buffBurningShaft"/>
+		<triggered_effect trigger="onSelfPrimaryActionUpdate" action="RemoveBuff" buff="buffBurningShaftActive"/>
+		<triggered_effect trigger="onSelfPrimaryActionUpdate" action="RemoveBuff" buff="buffBurningShaftActivate"/>
+		<triggered_effect trigger="onSelfPrimaryActionUpdate" action="AddBuff" buff="buffBurningShaftDeactivate"/>
+	</effect_group>
+	
+	<effect_group tiered="false" name="SpecialEffects">
+			<passive_effect name="LightMultiplier" operation="base_add" value="-.9"/>
+			<passive_effect name="HypothermalResist" operation="base_add" value="4">
+				<requirement name="CVarCompare" cvar="_underwater" operation="LT" value="1"/>
+			</passive_effect>
+	</effect_group>
+	</append>
+<!-- ******************************************************************************************************************************************************************************************************************* -->	
+<!--	<append xpath="/item_modifiers/item_modifier[@name='modArmorHelmetLight']">
+		<property name="DegradationMax" value="100,1000"/>
+		<property name="RepairTools" value="resourceRepairKit"/>
+		<property name="DegradationTags" value="batteryDegradation"/>
+		<property name="ShowQuality" value="true"/>
+		<property name="UnlimitedRepairs" value="false"/>		
+		<effect_group>
+			<requirement name="EquipmentModBroken, DurabilityOverhaul" mod_name="modArmorHelmetLight" equipment_tags="armorHead"/>
+			<triggered_effect trigger="onSelfPrimaryActionUpdate" action="SetPartActive" part="HeadLight" active="false"/>
+			<triggered_effect trigger="onSelfPrimaryActionUpdate" action="SetPartActive" part="HeadLightCam" active="false"/>
+			<triggered_effect trigger="onSelfPrimaryActionUpdate" action="RemoveBuff" buff="buffHelmetLight"/>
+			<triggered_effect trigger="onSelfPrimaryActionUpdate" action="RemoveBuff" buff="buffHelmetLightActive"/>
+		</effect_group>
+	</append> -->
+<!-- ******************************************************************************************************************************************************************************************************************* -->		
+		
+		<!-- *** HELMET LIGHT *** -->
+	<set xpath="/item_modifiers/item_modifier[@name='modArmorHelmetLight']">
+		<property name="Extends" value="modGeneralMaster" param1="CustomIcon"/>
+		<property name="UnlockedBy" value="modArmorHelmetLightSchematic"/>
+		<property name="Material" value="Msteel"/>
+		<property name="LightValue" value=".4"/>
+		<property name="DegradationMax" value="400,4000"/>
+		<property name="RepairTools" value="resourceRepairKit"/>
+		<property name="DegradationTags" value="batteryDegradation"/>
+		<property name="ShowQuality" value="true"/>
+		<property name="UnlimitedRepairs" value="false"/>
+		<effect_group tiered="false">
+			<triggered_effect trigger="onSelfEquipStart" action="AddPart" part="HeadLight" prefab="Entities/Lighting/miningHelmetLightSource" parentTransform="Spotlight" localPos="0,0,0" localRot="90,0,0"/>
+			<triggered_effect trigger="onSelfEquipStart" action="AddPart" part="HeadLightCam" prefab="Entities/Lighting/miningHelmetLightSource" parentTransform="CameraNode" localPos="0,0,0" localRot="-90,0,0"/>
+			<triggered_effect trigger="onSelfEquipStop" action="RemovePart" part="HeadLight"/>
+			<triggered_effect trigger="onSelfEquipStop" action="RemovePart" part="HeadLightCam"/>
+			<triggered_effect trigger="onSelfItemDeactivate" action="SetPartActive" part="HeadLight" active="false"/>
+			<triggered_effect trigger="onSelfItemDeactivate" action="SetPartActive" part="HeadLightCam" active="false"/>
+			<triggered_effect trigger="onSelfEnteredGame" action="AddBuff" buff="buffHelmetLightDeactivate"/>
+			<triggered_effect trigger="onSelfItemActivate" action="AddBuff" buff="buffHelmetLightActive"/>
+			<triggered_effect trigger="onSelfItemDeactivate" action="RemoveBuff" buff="buffHelmetLightActive"/>
+			<triggered_effect trigger="onSelfEquipStop" action="RemoveBuff" buff="buffHelmetLightActive"/>
+		</effect_group>
+		<effect_group>
+			<requirement name="EquipmentModBroken, DurabilityOverhaul" mod_name="modArmorHelmetLight" equipment_tags="armorHead"/>
+			<triggered_effect trigger="onSelfPrimaryActionUpdate" action="SetPartActive" part="HeadLight" active="false"/>
+			<triggered_effect trigger="onSelfPrimaryActionUpdate" action="SetPartActive" part="HeadLightCam" active="false"/>
+			<triggered_effect trigger="onSelfPrimaryActionUpdate" action="RemoveBuff" buff="buffHelmetLight"/>
+			<triggered_effect trigger="onSelfPrimaryActionUpdate" action="RemoveBuff" buff="buffHelmetLightActive"/>
+		</effect_group>
+	</set>
+<!-- ******************************************************************************************************************************************************************************************************************* -->		
+		
+		<!-- *** HELMET WATER PURIFIER *** -->
+	<set xpath="/item_modifiers/item_modifier[@name='modArmorWaterPurifier']">
+		<property name="Extends" value="modGeneralMaster" param1="CustomIcon"/>
+		<property name="UnlockedBy" value="modArmorWaterPurifierSchematic"/>
+		<property name="Material" value="Msteel"/>
+		<effect_group tiered="false">
+			<triggered_effect trigger="onSelfEnteredGame" action="AddBuff" buff="buffHelmetPurifierDeactivate"/>
+			<triggered_effect trigger="onSelfEquipStart" action="AddBuff" buff="buffHelmetPurifierActivate"/>
+			<triggered_effect trigger="onSelfEquipStop" action="RemoveBuff" buff="buffHelmetPurifierActive"/>
+			<triggered_effect trigger="onSelfAction2End" action="AddBuff" buff="buffHelmetPurifierActivate"/>
+			<triggered_effect trigger="onSelfPrimaryActionStart" action="AddBuff" buff="buffHelmetPurifierActivate"/>
+		</effect_group>
+	</set>
+<!-- ************************************************************************************************************************************************************** -->	
+<!--	<set xpath="/item_modifiers/item_modifier[@name='modArmorWaterPurifier']/effect_group[@tiered='false']/@tiered">true</set>
+	<append xpath="/item_modifiers/item_modifier[@name='modArmorWaterPurifier']">
+		<property name="DegradationTags" value="WaterPurifier"/>
+		<property name="DegradationMax" value="50,50"/>
+		<property name="ShowQuality" value="true"/>
+	</append> -->
+<!-- ************************************************************************************************************************************************************** -->		
+
+<!-- ************************************************************************************************************************************************************** -->
+</Faw>	
