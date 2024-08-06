@@ -1,0 +1,663 @@
+<configs>
+
+	<append xpath="/shapes">
+
+		<shape name="2FH_windowTrimTopFancyOffset">
+			<property name="Model" value="window_trim_top_fancy" />
+			<property name="ModelOffset" value="1,0,0"/>
+			<property name="AllowAllRotations" value="true" />
+			<property name="CustomIcon" value="shapeWindowTrimTopFancy" />
+			<property name="CustomIconTint" value="ff0000"/>
+			<property name="ShapeCategories" value="Trim" />
+			<property name="UseGlobalUV" value="Local" />
+			<property name="ImposterExclude" value="true" />
+			<property name="Collide" value="movement,melee,bullet,arrow,rocket" />
+			<property name="StabilitySupport" value="true" />
+			<property name="LightOpacity" value="0" />
+			<property name="WaterFlow" value="permitted" />
+		</shape>
+		
+		<shape name="2FH_plateFenderSkirtLeftOffset">
+			<property name="Model" value="plate_fender_skirt_left" />
+			<property name="ModelOffset" value="-0.3,0,0"/>
+			<property name="UseGlobalUV" value=",GLGGGG" />
+			<property name="CustomIcon" value="shapePlateFenderSkirtLeft" />
+			<property name="CustomIconTint" value="ff0000"/>
+			<property name="ShapeCategories" value="Round" />
+			<property name="Collide" value="movement,melee,bullet,arrow,rocket" />
+			<property name="ImposterExchange" value="imposterPlate" />
+			<property name="StabilitySupport" value="true" />
+			<property name="WaterFlow" value="permitted" />
+		</shape>
+		
+		<shape name="2FH_plateFenderSkirtRightOffset">
+			<property name="Model" value="plate_fender_skirt_right" />
+			<property name="ModelOffset" value="-0.3,0,0"/>
+			<property name="UseGlobalUV" value=",GLGGGG" />
+			<property name="CustomIcon" value="shapePlateFenderSkirtRight" />
+			<property name="CustomIconTint" value="ff0000"/>
+			<property name="ShapeCategories" value="Round" />
+			<property name="Collide" value="movement,melee,bullet,arrow,rocket" />
+			<property name="ImposterExchange" value="imposterPlate" />
+			<property name="StabilitySupport" value="true" />
+			<property name="WaterFlow" value="permitted" />
+		</shape>
+	
+<!--Sign Letters & Numbers-->
+
+		<shape name="2FH_signNumberOffset_0">
+		<!-- <property name="Path" value="solid" /> -->
+			<property name="Model" value="font_0" />
+			<property name="ModelOffset" value="1.01,0,.26"/>
+			<property name="Place" value="TowardsPlacerInverted" />
+			<property name="CustomIcon" value="shapeFont0" />
+			<property name="CustomIconTint" value="ff0000"/>
+			<property name="ShapeCategories" value="Letters" />
+			<property name="ImposterExclude" value="true" />
+			<property name="ImposterDontBlock" value="true" />
+			<property name="Collide" value="movement,melee,bullet,arrow,rocket" />
+			<property name="WaterFlow" value="permitted" />
+		</shape>
+
+		<shape name="2FH_signNumberOffset_1">
+			<!-- <property name="Path" value="solid" /> -->
+			<property name="Model" value="font_1" />
+			<property name="ModelOffset" value="1.01,0,.26"/>
+			<property name="Place" value="TowardsPlacerInverted" />
+			<property name="CustomIcon" value="shapeFont1" />
+			<property name="CustomIconTint" value="ff0000"/>
+			<property name="ShapeCategories" value="Letters" />
+			<property name="ImposterExclude" value="true" />
+			<property name="ImposterDontBlock" value="true" />
+			<property name="Collide" value="movement,melee,bullet,arrow,rocket" />
+			<property name="WaterFlow" value="permitted" />
+		</shape>
+
+		<shape name="2FH_signNumberOffset_2">
+			<!-- <property name="Path" value="solid" /> -->
+			<property name="Model" value="font_2" />
+			<property name="ModelOffset" value="1.01,0,.26"/>
+			<property name="Place" value="TowardsPlacerInverted" />
+			<property name="CustomIcon" value="shapeFont2" />
+			<property name="CustomIconTint" value="ff0000"/>
+			<property name="ShapeCategories" value="Letters" />
+			<property name="ImposterExclude" value="true" />
+			<property name="ImposterDontBlock" value="true" />
+			<property name="Collide" value="movement,melee,bullet,arrow,rocket" />
+			<property name="WaterFlow" value="permitted" />
+		</shape>
+
+		<shape name="2FH_signNumberOffset_3">
+			<!-- <property name="Path" value="solid" /> -->
+			<property name="Model" value="font_3" />
+			<property name="ModelOffset" value="1.01,0,.26"/>
+			<property name="Place" value="TowardsPlacerInverted" />
+			<property name="CustomIcon" value="shapeFont3" />
+			<property name="CustomIconTint" value="ff0000"/>
+			<property name="ShapeCategories" value="Letters" />
+			<property name="ImposterExclude" value="true" />
+			<property name="ImposterDontBlock" value="true" />
+			<property name="Collide" value="movement,melee,bullet,arrow,rocket" />
+			<property name="WaterFlow" value="permitted" />
+		</shape>
+
+		<shape name="2FH_signNumberOffset_4">
+			<!-- <property name="Path" value="solid" /> -->
+			<property name="Model" value="font_4" />
+			<property name="ModelOffset" value="1.01,0,.26"/>
+			<property name="Place" value="TowardsPlacerInverted" />
+			<property name="CustomIcon" value="shapeFont4" />
+			<property name="CustomIconTint" value="ff0000"/>
+			<property name="ShapeCategories" value="Letters" />
+			<property name="ImposterExclude" value="true" />
+			<property name="ImposterDontBlock" value="true" />
+			<property name="Collide" value="movement,melee,bullet,arrow,rocket" />
+			<property name="WaterFlow" value="permitted" />
+		</shape>
+
+		<shape name="2FH_signNumberOffset_5">
+			<!-- <property name="Path" value="solid" /> -->
+			<property name="Model" value="font_5" />
+			<property name="ModelOffset" value="1.01,0,.26"/>
+			<property name="Place" value="TowardsPlacerInverted" />
+			<property name="CustomIcon" value="shapeFont5" />
+			<property name="CustomIconTint" value="ff0000"/>
+			<property name="ShapeCategories" value="Letters" />
+			<property name="ImposterExclude" value="true" />
+			<property name="ImposterDontBlock" value="true" />
+			<property name="Collide" value="movement,melee,bullet,arrow,rocket" />
+			<property name="WaterFlow" value="permitted" />
+		</shape>
+
+		<shape name="2FH_signNumberOffset_6">
+			<!-- <property name="Path" value="solid" /> -->
+			<property name="Model" value="font_6" />
+			<property name="ModelOffset" value="1.01,0,.26"/>
+			<property name="Place" value="TowardsPlacerInverted" />
+			<property name="CustomIcon" value="shapeFont6" />
+			<property name="CustomIconTint" value="ff0000"/>
+			<property name="ShapeCategories" value="Letters" />
+			<property name="ImposterExclude" value="true" />
+			<property name="ImposterDontBlock" value="true" />
+			<property name="Collide" value="movement,melee,bullet,arrow,rocket" />
+			<property name="WaterFlow" value="permitted" />
+		</shape>
+
+		<shape name="2FH_signNumberOffset_7">
+			<!-- <property name="Path" value="solid" /> -->
+			<property name="Model" value="font_7" />
+			<property name="ModelOffset" value="1.01,0,.26"/>
+			<property name="Place" value="TowardsPlacerInverted" />
+			<property name="CustomIcon" value="shapeFont7" />
+			<property name="CustomIconTint" value="ff0000"/>
+			<property name="ShapeCategories" value="Letters" />
+			<property name="ImposterExclude" value="true" />
+			<property name="ImposterDontBlock" value="true" />
+			<property name="Collide" value="movement,melee,bullet,arrow,rocket" />
+			<property name="WaterFlow" value="permitted" />
+		</shape>
+
+		<shape name="2FH_signNumberOffset_8">
+			<!-- <property name="Path" value="solid" /> -->
+			<property name="Model" value="font_8" />
+			<property name="ModelOffset" value="1.01,0,.26"/>
+			<property name="Place" value="TowardsPlacerInverted" />
+			<property name="CustomIcon" value="shapeFont8" />
+			<property name="CustomIconTint" value="ff0000"/>
+			<property name="ShapeCategories" value="Letters" />
+			<property name="ImposterExclude" value="true" />
+			<property name="ImposterDontBlock" value="true" />
+			<property name="Collide" value="movement,melee,bullet,arrow,rocket" />
+			<property name="WaterFlow" value="permitted" />
+		</shape>
+
+		<shape name="2FH_signNumberOffset_9">
+			<!-- <property name="Path" value="solid" /> -->
+			<property name="Model" value="font_9" />
+			<property name="ModelOffset" value="1.01,0,.26"/>
+			<property name="Place" value="TowardsPlacerInverted" />
+			<property name="CustomIcon" value="shapeFont9" />
+			<property name="CustomIconTint" value="ff0000"/>
+			<property name="ShapeCategories" value="Letters" />
+			<property name="ImposterExclude" value="true" />
+			<property name="ImposterDontBlock" value="true" />
+			<property name="Collide" value="movement,melee,bullet,arrow,rocket" />
+		</shape>
+
+		<shape name="2FH_signLetterOffset_a">
+			<!-- <property name="Path" value="solid" /> -->
+			<property name="Model" value="font_a" />
+			<property name="ModelOffset" value="1.01,0,.26"/>
+			<property name="Place" value="TowardsPlacerInverted" />
+			<property name="CustomIcon" value="shapeFontA" />
+			<property name="CustomIconTint" value="ff0000"/>
+			<property name="ShapeCategories" value="Letters" />
+			<property name="ImposterExclude" value="true" />
+			<property name="ImposterDontBlock" value="true" />
+			<property name="Collide" value="movement,melee,bullet,arrow,rocket" />
+			<property name="WaterFlow" value="permitted" />
+		</shape>
+
+		<shape name="2FH_signLetterOffset_b">
+			<!-- <property name="Path" value="solid" /> -->
+			<property name="Model" value="font_b" />
+			<property name="ModelOffset" value="1.01,0,.26"/>
+			<property name="Place" value="TowardsPlacerInverted" />
+			<property name="CustomIcon" value="shapeFontB" />
+			<property name="CustomIconTint" value="ff0000"/>
+			<property name="ShapeCategories" value="Letters" />
+			<property name="ImposterExclude" value="true" />
+			<property name="ImposterDontBlock" value="true" />
+			<property name="Collide" value="movement,melee,bullet,arrow,rocket" />
+			<property name="WaterFlow" value="permitted" />
+		</shape>
+
+		<shape name="2FH_signLetterOffset_c">
+			<!-- <property name="Path" value="solid" /> -->
+			<property name="Model" value="font_c" />
+			<property name="ModelOffset" value="1.01,0,.26"/>
+			<property name="Place" value="TowardsPlacerInverted" />
+			<property name="CustomIcon" value="shapeFontC" />
+			<property name="CustomIconTint" value="ff0000"/>
+			<property name="ShapeCategories" value="Letters" />
+			<property name="ImposterExclude" value="true" />
+			<property name="ImposterDontBlock" value="true" />
+			<property name="Collide" value="movement,melee,bullet,arrow,rocket" />
+			<property name="WaterFlow" value="permitted" />
+		</shape>
+
+		<shape name="2FH_signLetterOffset_d">
+			<!-- <property name="Path" value="solid" /> -->
+			<property name="Model" value="font_d" />
+			<property name="ModelOffset" value="1.01,0,.26"/>
+			<property name="Place" value="TowardsPlacerInverted" />
+			<property name="CustomIcon" value="shapeFontD" />
+			<property name="CustomIconTint" value="ff0000"/>
+			<property name="ShapeCategories" value="Letters" />
+			<property name="ImposterExclude" value="true" />
+			<property name="ImposterDontBlock" value="true" />
+			<property name="Collide" value="movement,melee,bullet,arrow,rocket" />
+			<property name="WaterFlow" value="permitted" />
+		</shape>
+
+		<shape name="2FH_signLetterOffset_e">
+			<!-- <property name="Path" value="solid" /> -->
+			<property name="Model" value="font_e" />
+			<property name="ModelOffset" value="1.01,0,.26"/>
+			<property name="Place" value="TowardsPlacerInverted" />
+			<property name="CustomIcon" value="shapeFontE" />
+			<property name="CustomIconTint" value="ff0000"/>
+			<property name="ShapeCategories" value="Letters" />
+			<property name="ImposterExclude" value="true" />
+			<property name="ImposterDontBlock" value="true" />
+			<property name="Collide" value="movement,melee,bullet,arrow,rocket" />
+			<property name="WaterFlow" value="permitted" />
+		</shape>
+
+		<shape name="2FH_signLetterOffset_f">
+			<!-- <property name="Path" value="solid" /> -->
+			<property name="Model" value="font_f" />
+			<property name="ModelOffset" value="1.01,0,.26"/>
+			<property name="Place" value="TowardsPlacerInverted" />
+			<property name="CustomIcon" value="shapeFontF" />
+			<property name="CustomIconTint" value="ff0000"/>
+			<property name="ShapeCategories" value="Letters" />
+			<property name="ImposterExclude" value="true" />
+			<property name="ImposterDontBlock" value="true" />
+			<property name="Collide" value="movement,melee,bullet,arrow,rocket" />
+			<property name="WaterFlow" value="permitted" />
+		</shape>
+
+		<shape name="2FH_signLetterOffset_g">
+			<!-- <property name="Path" value="solid" /> -->
+			<property name="Model" value="font_g" />
+			<property name="ModelOffset" value="1.01,0,.26"/>
+			<property name="Place" value="TowardsPlacerInverted" />
+			<property name="CustomIcon" value="shapeFontG" />
+			<property name="CustomIconTint" value="ff0000"/>
+			<property name="ShapeCategories" value="Letters" />
+			<property name="ImposterExclude" value="true" />
+			<property name="ImposterDontBlock" value="true" />
+			<property name="Collide" value="movement,melee,bullet,arrow,rocket" />
+			<property name="WaterFlow" value="permitted" />
+		</shape>
+
+		<shape name="2FH_signLetterOffset_h">
+			<!-- <property name="Path" value="solid" /> -->
+			<property name="Model" value="font_h" />
+			<property name="ModelOffset" value="1.01,0,.26"/>
+			<property name="Place" value="TowardsPlacerInverted" />
+			<property name="CustomIcon" value="shapeFontH" />
+			<property name="CustomIconTint" value="ff0000"/>
+			<property name="ShapeCategories" value="Letters" />
+			<property name="ImposterExclude" value="true" />
+			<property name="ImposterDontBlock" value="true" />
+			<property name="Collide" value="movement,melee,bullet,arrow,rocket" />
+			<property name="WaterFlow" value="permitted" />
+		</shape>
+
+		<shape name="2FH_signLetterOffset_i">
+			<!-- <property name="Path" value="solid" /> -->
+			<property name="Model" value="font_i" />
+			<property name="ModelOffset" value="1.01,0,.26"/>
+			<property name="Place" value="TowardsPlacerInverted" />
+			<property name="CustomIcon" value="shapeFontI" />
+			<property name="CustomIconTint" value="ff0000"/>
+			<property name="ShapeCategories" value="Letters" />
+			<property name="ImposterExclude" value="true" />
+			<property name="ImposterDontBlock" value="true" />
+			<property name="Collide" value="movement,melee,bullet,arrow,rocket" />
+			<property name="WaterFlow" value="permitted" />
+		</shape>
+
+		<shape name="2FH_signLetterOffset_j">
+			<!-- <property name="Path" value="solid" /> -->
+			<property name="Model" value="font_j" />
+			<property name="ModelOffset" value="1.01,0,.26"/>
+			<property name="Place" value="TowardsPlacerInverted" />
+			<property name="CustomIcon" value="shapeFontJ" />
+			<property name="CustomIconTint" value="ff0000"/>
+			<property name="ShapeCategories" value="Letters" />
+			<property name="ImposterExclude" value="true" />
+			<property name="ImposterDontBlock" value="true" />
+			<property name="Collide" value="movement,melee,bullet,arrow,rocket" />
+			<property name="WaterFlow" value="permitted" />
+		</shape>
+
+		<shape name="2FH_signLetterOffset_k">
+			<!-- <property name="Path" value="solid" /> -->
+			<property name="Model" value="font_k" />
+			<property name="ModelOffset" value="1.01,0,.26"/>
+			<property name="Place" value="TowardsPlacerInverted" />
+			<property name="CustomIcon" value="shapeFontK" />
+			<property name="CustomIconTint" value="ff0000"/>
+			<property name="ShapeCategories" value="Letters" />
+			<property name="ImposterExclude" value="true" />
+			<property name="ImposterDontBlock" value="true" />
+			<property name="Collide" value="movement,melee,bullet,arrow,rocket" />
+			<property name="WaterFlow" value="permitted" />
+		</shape>
+
+		<shape name="2FH_signLetterOffset_l">
+			<!-- <property name="Path" value="solid" /> -->
+			<property name="Model" value="font_l" />
+			<property name="ModelOffset" value="1.01,0,.26"/>
+			<property name="Place" value="TowardsPlacerInverted" />
+			<property name="CustomIcon" value="shapeFontL" />
+			<property name="CustomIconTint" value="ff0000"/>
+			<property name="ShapeCategories" value="Letters" />
+			<property name="ImposterExclude" value="true" />
+			<property name="ImposterDontBlock" value="true" />
+			<property name="Collide" value="movement,melee,bullet,arrow,rocket" />
+			<property name="WaterFlow" value="permitted" />
+		</shape>
+
+		<shape name="2FH_signLetterOffset_m">
+			<!-- <property name="Path" value="solid" /> -->
+			<property name="Model" value="font_m" />
+			<property name="ModelOffset" value="1.01,0,.26"/>
+			<property name="Place" value="TowardsPlacerInverted" />
+			<property name="CustomIcon" value="shapeFontM" />
+			<property name="CustomIconTint" value="ff0000"/>
+			<property name="ShapeCategories" value="Letters" />
+			<property name="ImposterExclude" value="true" />
+			<property name="ImposterDontBlock" value="true" />
+			<property name="Collide" value="movement,melee,bullet,arrow,rocket" />
+			<property name="WaterFlow" value="permitted" />
+		</shape>
+
+		<shape name="2FH_signLetterOffset_n">
+			<!-- <property name="Path" value="solid" /> -->
+			<property name="Model" value="font_n" />
+			<property name="ModelOffset" value="1.01,0,.26"/>
+			<property name="Place" value="TowardsPlacerInverted" />
+			<property name="CustomIcon" value="shapeFontN" />
+			<property name="CustomIconTint" value="ff0000"/>
+			<property name="ShapeCategories" value="Letters" />
+			<property name="ImposterExclude" value="true" />
+			<property name="ImposterDontBlock" value="true" />
+			<property name="Collide" value="movement,melee,bullet,arrow,rocket" />
+			<property name="WaterFlow" value="permitted" />
+		</shape>
+
+		<shape name="2FH_signLetterOffset_o">
+			<!-- <property name="Path" value="solid" /> -->
+			<property name="Model" value="font_o" />
+			<property name="ModelOffset" value="1.01,0,.26"/>
+			<property name="Place" value="TowardsPlacerInverted" />
+			<property name="CustomIcon" value="shapeFontO" />
+			<property name="CustomIconTint" value="ff0000"/>
+			<property name="ShapeCategories" value="Letters" />
+			<property name="ImposterExclude" value="true" />
+			<property name="ImposterDontBlock" value="true" />
+			<property name="Collide" value="movement,melee,bullet,arrow,rocket" />
+			<property name="WaterFlow" value="permitted" />
+		</shape>
+
+		<shape name="2FH_signLetterOffset_p">
+			<!-- <property name="Path" value="solid" /> -->
+			<property name="Model" value="font_p" />
+			<property name="ModelOffset" value="1.01,0,.26"/>
+			<property name="Place" value="TowardsPlacerInverted" />
+			<property name="CustomIcon" value="shapeFontP" />
+			<property name="CustomIconTint" value="ff0000"/>
+			<property name="ShapeCategories" value="Letters" />
+			<property name="ImposterExclude" value="true" />
+			<property name="ImposterDontBlock" value="true" />
+			<property name="Collide" value="movement,melee,bullet,arrow,rocket" />
+			<property name="WaterFlow" value="permitted" />
+		</shape>
+
+		<shape name="2FH_signLetterOffset_q">
+			<!-- <property name="Path" value="solid" /> -->
+			<property name="Model" value="font_q" />
+			<property name="ModelOffset" value="1.01,0,.26"/>
+			<property name="Place" value="TowardsPlacerInverted" />
+			<property name="CustomIcon" value="shapeFontQ" />
+			<property name="CustomIconTint" value="ff0000"/>
+			<property name="ShapeCategories" value="Letters" />
+			<property name="ImposterExclude" value="true" />
+			<property name="ImposterDontBlock" value="true" />
+			<property name="Collide" value="movement,melee,bullet,arrow,rocket" />
+			<property name="WaterFlow" value="permitted" />
+		</shape>
+
+		<shape name="2FH_signLetterOffset_r">
+			<!-- <property name="Path" value="solid" /> -->
+			<property name="Model" value="font_r" />
+			<property name="ModelOffset" value="1.01,0,.26"/>
+			<property name="Place" value="TowardsPlacerInverted" />
+			<property name="CustomIcon" value="shapeFontR" />
+			<property name="CustomIconTint" value="ff0000"/>
+			<property name="ShapeCategories" value="Letters" />
+			<property name="ImposterExclude" value="true" />
+			<property name="ImposterDontBlock" value="true" />
+			<property name="Collide" value="movement,melee,bullet,arrow,rocket" />
+			<property name="WaterFlow" value="permitted" />
+		</shape>
+
+		<shape name="2FH_signLetterOffset_s">
+			<!-- <property name="Path" value="solid" /> -->
+			<property name="Model" value="font_s" />
+			<property name="ModelOffset" value="1.01,0,.26"/>
+			<property name="Place" value="TowardsPlacerInverted" />
+			<property name="CustomIcon" value="shapeFontS" />
+			<property name="CustomIconTint" value="ff0000"/>
+			<property name="ShapeCategories" value="Letters" />
+			<property name="ImposterExclude" value="true" />
+			<property name="ImposterDontBlock" value="true" />
+			<property name="Collide" value="movement,melee,bullet,arrow,rocket" />
+			<property name="WaterFlow" value="permitted" />
+		</shape>
+
+		<shape name="2FH_signLetterOffset_t">
+			<!-- <property name="Path" value="solid" /> -->
+			<property name="Model" value="font_t" />
+			<property name="ModelOffset" value="1.01,0,.26"/>
+			<property name="Place" value="TowardsPlacerInverted" />
+			<property name="CustomIcon" value="shapeFontT" />
+			<property name="CustomIconTint" value="ff0000"/>
+			<property name="ShapeCategories" value="Letters" />
+			<property name="ImposterExclude" value="true" />
+			<property name="ImposterDontBlock" value="true" />
+			<property name="Collide" value="movement,melee,bullet,arrow,rocket" />
+			<property name="WaterFlow" value="permitted" />
+		</shape>
+
+		<shape name="2FH_signLetterOffset_u">
+			<!-- <property name="Path" value="solid" /> -->
+			<property name="Model" value="font_u" />
+			<property name="ModelOffset" value="1.01,0,.26"/>
+			<property name="Place" value="TowardsPlacerInverted" />
+			<property name="CustomIcon" value="shapeFontU" />
+			<property name="CustomIconTint" value="ff0000"/>
+			<property name="ShapeCategories" value="Letters" />
+			<property name="ImposterExclude" value="true" />
+			<property name="ImposterDontBlock" value="true" />
+			<property name="Collide" value="movement,melee,bullet,arrow,rocket" />
+			<property name="WaterFlow" value="permitted" />
+		</shape>
+
+		<shape name="2FH_signLetterOffset_v">
+			<!-- <property name="Path" value="solid" /> -->
+			<property name="Model" value="font_v" />
+			<property name="ModelOffset" value="1.01,0,.26"/>
+			<property name="Place" value="TowardsPlacerInverted" />
+			<property name="CustomIcon" value="shapeFontV" />
+			<property name="CustomIconTint" value="ff0000"/>
+			<property name="ShapeCategories" value="Letters" />
+			<property name="ImposterExclude" value="true" />
+			<property name="ImposterDontBlock" value="true" />
+			<property name="Collide" value="movement,melee,bullet,arrow,rocket" />
+			<property name="WaterFlow" value="permitted" />
+		</shape>
+
+		<shape name="2FH_signLetterOffset_w">
+			<!-- <property name="Path" value="solid" /> -->
+			<property name="Model" value="font_w" />
+			<property name="ModelOffset" value="1.01,0,.26"/>
+			<property name="Place" value="TowardsPlacerInverted" />
+			<property name="CustomIcon" value="shapeFontW" />
+			<property name="CustomIconTint" value="ff0000"/>
+			<property name="ShapeCategories" value="Letters" />
+			<property name="ImposterExclude" value="true" />
+			<property name="ImposterDontBlock" value="true" />
+			<property name="Collide" value="movement,melee,bullet,arrow,rocket" />
+			<property name="WaterFlow" value="permitted" />
+		</shape>
+
+		<shape name="2FH_signLetterOffset_x">
+			<!-- <property name="Path" value="solid" /> -->
+			<property name="Model" value="font_x" />
+			<property name="ModelOffset" value="1.01,0,.26"/>
+			<property name="Place" value="TowardsPlacerInverted" />
+			<property name="CustomIcon" value="shapeFontX" />
+			<property name="CustomIconTint" value="ff0000"/>
+			<property name="ShapeCategories" value="Letters" />
+			<property name="ImposterExclude" value="true" />
+			<property name="ImposterDontBlock" value="true" />
+			<property name="Collide" value="movement,melee,bullet,arrow,rocket" />
+			<property name="WaterFlow" value="permitted" />
+		</shape>
+
+		<shape name="2FH_signLetterOffset_y">
+			<!-- <property name="Path" value="solid" /> -->
+			<property name="Model" value="font_y" />
+			<property name="ModelOffset" value="1.01,0,.26"/>
+			<property name="Place" value="TowardsPlacerInverted" />
+			<property name="CustomIcon" value="shapeFontY" />
+			<property name="CustomIconTint" value="ff0000"/>
+			<property name="ShapeCategories" value="Letters" />
+			<property name="ImposterExclude" value="true" />
+			<property name="ImposterDontBlock" value="true" />
+			<property name="Collide" value="movement,melee,bullet,arrow,rocket" />
+			<property name="WaterFlow" value="permitted" />
+		</shape>
+
+		<shape name="2FH_signLetterOffset_z">
+			<!-- <property name="Path" value="solid" /> -->
+			<property name="Model" value="font_z" />
+			<property name="ModelOffset" value="1.01,0,.26"/>
+			<property name="Place" value="TowardsPlacerInverted" />
+			<property name="CustomIcon" value="shapeFontZ" />
+			<property name="CustomIconTint" value="ff0000"/>
+			<property name="ShapeCategories" value="Letters" />
+			<property name="ImposterExclude" value="true" />
+			<property name="ImposterDontBlock" value="true" />
+			<property name="Collide" value="movement,melee,bullet,arrow,rocket" />
+			<property name="WaterFlow" value="permitted" />
+		</shape>
+
+		<shape name="2FH_signLetterOffset_cross">
+			<!-- <property name="Path" value="solid" /> -->
+			<property name="Model" value="font_cross" />
+			<property name="ModelOffset" value="1.01,0,.26"/>
+			<property name="Place" value="TowardsPlacerInverted" />
+			<property name="CustomIcon" value="shapeFontCross" />
+			<property name="CustomIconTint" value="ff0000"/>
+			<property name="ShapeCategories" value="Letters" />
+			<property name="ImposterExclude" value="true" />
+			<property name="ImposterDontBlock" value="true" />
+			<property name="Collide" value="movement,melee,bullet,arrow,rocket" />
+			<property name="WaterFlow" value="permitted" />
+		</shape>
+
+		<shape name="2FH_signLetterOffset_period">
+			<!-- <property name="Path" value="solid" /> -->
+			<property name="Model" value="font_period" />
+			<property name="ModelOffset" value="1.01,0,.26"/>
+			<property name="Place" value="TowardsPlacerInverted" />
+			<property name="CustomIcon" value="shapeFontPeriod" />
+			<property name="CustomIconTint" value="ff0000"/>
+			<property name="ShapeCategories" value="Letters" />
+			<property name="ImposterExclude" value="true" />
+			<property name="ImposterDontBlock" value="true" />
+			<property name="Collide" value="movement,melee,bullet,arrow,rocket" />
+			<property name="WaterFlow" value="permitted" />
+		</shape>
+
+		<shape name="2FH_signLetterOffset_comma">
+			<!-- <property name="Path" value="solid" /> -->
+			<property name="Model" value="font_comma" />
+			<property name="ModelOffset" value="1.01,0,.26"/>
+			<property name="Place" value="TowardsPlacerInverted" />
+			<property name="CustomIcon" value="shapeFontComma" />
+			<property name="CustomIconTint" value="ff0000"/>
+			<property name="ShapeCategories" value="Letters" />
+			<property name="ImposterExclude" value="true" />
+			<property name="ImposterDontBlock" value="true" />
+			<property name="Collide" value="movement,melee,bullet,arrow,rocket" />
+			<property name="WaterFlow" value="permitted" />
+		</shape>
+
+		<shape name="2FH_signLetterOffset_apostrophe">
+			<!-- <property name="Path" value="solid" /> -->
+			<property name="Model" value="font_apostrophe" />
+			<property name="ModelOffset" value="1.01,0,.26"/>
+			<property name="Place" value="TowardsPlacerInverted" />
+			<property name="CustomIcon" value="shapeFontApostrophe" />
+			<property name="CustomIconTint" value="ff0000"/>
+			<property name="ShapeCategories" value="Letters" />
+			<property name="ImposterExclude" value="true" />
+			<property name="ImposterDontBlock" value="true" />
+			<property name="Collide" value="movement,melee,bullet,arrow,rocket" />
+			<property name="WaterFlow" value="permitted" />
+		</shape>
+
+		<shape name="2FH_signLetterOffset_exclamation">
+			<!-- <property name="Path" value="solid" /> -->
+			<property name="Model" value="font_exclamation" />
+			<property name="ModelOffset" value="1.01,0,.26"/>
+			<property name="Place" value="TowardsPlacerInverted" />
+			<property name="CustomIcon" value="shapeFontExclamation" />
+			<property name="CustomIconTint" value="ff0000"/>
+			<property name="ShapeCategories" value="Letters" />
+			<property name="ImposterExclude" value="true" />
+			<property name="ImposterDontBlock" value="true" />
+			<property name="Collide" value="movement,melee,bullet,arrow,rocket" />
+			<property name="WaterFlow" value="permitted" />
+		</shape>
+
+		<shape name="2FH_signLetterOffset_question">
+			<!-- <property name="Path" value="solid" /> -->
+			<property name="Model" value="font_question" />
+			<property name="ModelOffset" value="1.01,0,.26"/>
+			<property name="Place" value="TowardsPlacerInverted" />
+			<property name="CustomIcon" value="shapeFontQuestion" />
+			<property name="CustomIconTint" value="ff0000"/>
+			<property name="ShapeCategories" value="Letters" />
+			<property name="ImposterExclude" value="true" />
+			<property name="ImposterDontBlock" value="true" />
+			<property name="Collide" value="movement,melee,bullet,arrow,rocket" />
+			<property name="WaterFlow" value="permitted" />
+		</shape>
+
+		<shape name="2FH_signLetterOffset_ampersand">
+			<!-- <property name="Path" value="solid" /> -->
+			<property name="Model" value="font_ampersand" />
+			<property name="ModelOffset" value="1.01,0,.26"/>
+			<property name="Place" value="TowardsPlacerInverted" />
+			<property name="CustomIcon" value="shapeSignLetter_ampersand" />
+			<property name="CustomIconTint" value="ff0000"/>
+			<property name="ShapeCategories" value="Letters" />
+			<property name="ImposterExclude" value="true" />
+			<property name="ImposterDontBlock" value="true" />
+			<property name="Collide" value="movement,melee,bullet,arrow,rocket" />
+			<property name="WaterFlow" value="permitted" />
+		</shape>
+
+		<shape name="2FH_signLetterOffset_prohibition">
+			<!-- <property name="Path" value="solid" /> -->
+			<property name="Model" value="font_prohibition" />
+			<property name="ModelOffset" value="1.01,0,.26"/>
+			<property name="Place" value="TowardsPlacerInverted" />
+			<property name="CustomIcon" value="shapeFontProhibition" />
+			<property name="CustomIconTint" value="ff0000"/>
+			<property name="ShapeCategories" value="Letters" />
+			<property name="ImposterExclude" value="true" />
+			<property name="ImposterDontBlock" value="true" />
+			<property name="Collide" value="movement,melee,bullet,arrow,rocket" />
+			<property name="WaterFlow" value="permitted" />
+		</shape>
+	</append>
+</configs>
