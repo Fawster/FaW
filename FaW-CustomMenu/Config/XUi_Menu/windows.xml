@@ -1,0 +1,5 @@
+<Faw>
+	<set xpath="/windows/window[@name='menuBackground']/texture[@name='bgTexture']/@texture">@modfolder:UIAtlases/ItemIconAtlas/pozadinka.jpg</set>
+	<set xpath="/windows/window[@name='mainMenuLogo']/texture[@name='gameLogo']/@texture">@modfolder:UIAtlases/ItemIconAtlas/fawlogo.png</set>
+<!-- ******************************************************************************************************************************************************************** -->
+</Faw>
