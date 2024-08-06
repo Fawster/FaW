@@ -1,0 +1,22 @@
+<xml>
+	<!-- <set xpath="//block[@name='wallTorchLightPlayer']/property[@name='Class' and @value='TorchHeatMap']/@value">_28AL.CC.Blocks.TorchHeatMapTE,28ALCC</set>
+	<append xpath="//block[@name='wallTorchLightPlayer']">
+		<property name="ActiveRadiusEffects" value="buffCampfireAOE(10)"/>
+	</append>
+
+	<append xpath="//block[@name='cntBathTubEmpty']">
+		<property name="Class" value="_28AL.CC.Blocks.GenericTE,28ALCC"/>
+		<property name="ActiveRadiusEffects" value="buffBurningEnvironment(5)"/>
+	</append> -->
+
+	<!-- Couldn't think of an example to test the non-always-on one. -->
+	<!-- <set xpath="//block[@name='candleWallLightPlayer']/property[@name='Class']/@value">_28AL.CC.Blocks.LightTE,28ALCC</set> -->
+	<!-- <append xpath="//block[@name='candleWallLightPlayer']"> -->
+	<!-- 	<property name="ActiveRadiusEffects" value="buffShocked(5)"/> -->
+	<!-- </append> -->
+
+	<!-- <set xpath="//block[@name='candleWallLightPlayer']/property[@name='Class']/@value">_28AL.CC.Blocks.LightAlwaysOnTE,28ALCC</set>
+	<append xpath="//block[@name='candleWallLightPlayer']">
+		<property name="ActiveRadiusEffects" value="twitch_buffTrippy(5)"/>
+	</append> -->
+</xml>
