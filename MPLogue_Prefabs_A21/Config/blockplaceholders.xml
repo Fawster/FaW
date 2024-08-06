@@ -1,0 +1,38 @@
+﻿<blockplaceholders>
+ 	
+<!-- *************************************************************
+                        Added
+************************************************************** -->			
+		
+	<append xpath="/blockplaceholders">
+
+
+
+		<placeholder name="HardAirVomitClaymoreHelper">
+			<block name="MPL_HardAirVomitClaymore" prob="1"/>
+		</placeholder>		
+		
+		<placeholder name="MPL_OrbSafeRandomLootHelper">
+			<block name="MPL_OrbSafeEmpty" prob=".5"/>
+			<block name="MPL_OrbSafeClosed" prob=".5"/>
+		</placeholder>
+			
+		<placeholder name="MPL_cntGunRackSmallRandomLootHelper">
+			<block name="MPL_cntGunRackSmallEmpty01" prob=".18"/>
+			<block name="MPL_cntGunRackSmallEmpty02" prob=".18"/>
+			<block name="MPL_cntGunRackSmallEmpty03" prob=".18"/>
+			<block name="MPL_cntGunRackSmallMagazines" prob=".20"/>
+			<block name="MPL_cntGunRackSmallArmor" prob=".26"/>
+		</placeholder>
+
+		<placeholder name="MPL_cntGunRackLargeRandomLootHelper">
+			<block name="MPL_cntGunRackLargeGuns01" prob=".3"/>
+			<block name="MPL_cntGunRackLargeGuns02" prob=".3"/>
+			<block name="MPL_cntGunRackLargeGunsEmpty01" prob=".2"/>
+			<block name="MPL_cntGunRackLargeGunsEmpty02" prob=".2"/>
+		</placeholder>
+		
+			
+    </append>
+	
+</blockplaceholders>
