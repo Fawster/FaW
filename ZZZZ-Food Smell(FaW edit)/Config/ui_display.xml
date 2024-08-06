@@ -1,0 +1,29 @@
+<Faw>
+	<append xpath="//item_display_info[@display_type='food']">
+		<display_entry name="dSmell" title_key="statSmell"/>
+	</append>
+	
+	<append xpath="//item_display_info[@display_type='foodWater']">
+		<display_entry name="dSmell" title_key="statSmell"/>
+	</append>
+	
+	<append xpath="//item_display_info[@display_type='foodWaterNegative']">
+		<display_entry name="dSmell" title_key="statSmell"/>
+	</append>
+	
+	<append xpath="//item_display_info[@display_type='foodPumpkinCheesecake']">
+		<display_entry name="dSmell" title_key="statSmell"/>
+	</append>
+	
+	<append xpath="//item_display_info[@display_type='foodRaw']">
+		<display_entry name="dSmell" title_key="statSmell"/>
+	</append>
+	
+	<append xpath="//item_display_info[@display_type='foodWaterRaw']">
+		<display_entry name="dSmell" title_key="statSmell"/>
+	</append>
+	
+	<append xpath="//item_display_info[@display_type='foodShamChowder']">
+		<display_entry name="dSmell" title_key="statSmell"/>
+	</append>
+</Faw> 

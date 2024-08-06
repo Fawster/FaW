@@ -1,0 +1,288 @@
+<Hells_Janitor>
+	<append xpath="/buffs">
+		<!-- *** food smell *** -->
+		<buff name="buffAddHeatTrigger" hidden="true">
+			<duration value="0"/>
+			<effect_group compare_type="or">
+			
+				<!-- Zip --> 
+				<requirement name="PlayerItemCount" item_name="drinkMilkshake" operation="GT" value="1"/>
+				<requirement name="PlayerItemCount" item_name="drinkJarMilk" operation="GT" value="5"/>
+				<requirement name="PlayerItemCount" item_name="foodHoneyham" operation="GT" value="6"/>
+				<requirement name="PlayerItemCount" item_name="foodChocolatePaste" operation="GT" value="5"/>
+				<requirement name="PlayerItemCount" item_name="foodBlueberryFruitRoller" operation="GT" value="5"/>
+				<requirement name="PlayerItemCount" item_name="foodDonut" operation="GT" value="10"/>
+				<requirement name="PlayerItemCount" item_name="foodCupcake" operation="GT" value="10"/>
+				<requirement name="PlayerItemCount" item_name="foodCheese" operation="GT" value="10"/>
+				<requirement name="PlayerItemCount" item_name="foodCream Cheese" operation="GT" value="10"/>
+				<requirement name="PlayerItemCount" item_name="foodWheat Bread" operation="GT" value="5"/>
+				<requirement name="PlayerItemCount" item_name="foodPlain Yogurt" operation="GT" value="10"/>
+				<requirement name="PlayerItemCount" item_name="foodCookedbeets" operation="GT" value="3"/>
+				<requirement name="PlayerItemCount" item_name="foodFried Chicken Breast" operation="GT" value="2"/>
+				<requirement name="PlayerItemCount" item_name="foodCoconut" operation="GT" value="10"/>
+				<requirement name="PlayerItemCount" item_name="foodWatermelon" operation="GT" value="5"/>
+				<requirement name="PlayerItemCount" item_name="drinkwatermelon juice" operation="GT" value="5"/>
+				<requirement name="PlayerItemCount" item_name="foodRaspberry" operation="GT" value="20"/>
+				<requirement name="PlayerItemCount" item_name="foodButterSpread" operation="GT" value="20"/>
+				<requirement name="PlayerItemCount" item_name="foodPlain Yogurt" operation="GT" value="10"/>
+				<requirement name="PlayerItemCount" item_name="foodBeet" operation="GT" value="50"/>
+				<requirement name="PlayerItemCount" item_name="foodCookedbeets" operation="GT" value="3"/>
+				<requirement name="PlayerItemCount" item_name="foodFried Chicken Breast" operation="GT" value="2"/>
+				<requirement name="PlayerItemCount" item_name="foodStrawberry" operation="GT" value="100"/>
+				<requirement name="PlayerItemCount" item_name="foodPineapple" operation="GT" value="10"/>
+				<requirement name="PlayerItemCount" item_name="drinkpineapple juice" operation="GT" value="10"/>
+				<requirement name="PlayerItemCount" item_name="foodCherry" operation="GT" value="50"/>
+				<requirement name="PlayerItemCount" item_name="foodMeatBurger" operation="GT" value="3"/>
+				<requirement name="PlayerItemCount" item_name="foodMeatball" operation="GT" value="50"/>
+				<requirement name="PlayerItemCount" item_name="foodGrape" operation="GT" value="20"/>
+				<requirement name="PlayerItemCount" item_name="drinkGrape Juice" operation="GT" value="10"/>
+				<requirement name="PlayerItemCount" item_name="foodblackberry" operation="GT" value="50"/>
+				<requirement name="PlayerItemCount" item_name="foodLime" operation="GT" value="30"/>
+				<requirement name="PlayerItemCount" item_name="foodAvocado" operation="GT" value="10"/>
+				<requirement name="PlayerItemCount" item_name="foodpizza" operation="GT" value="1"/>
+				<requirement name="PlayerItemCount" item_name="foodpepperoniandmeatpizza" operation="GT" value="1"/>
+				<requirement name="PlayerItemCount" item_name="foodBakingBreadHotDogBun" operation="GT" value="5"/>
+				<requirement name="PlayerItemCount" item_name="foodDeliPepperoniSliced" operation="GT" value="5"/>
+				<requirement name="PlayerItemCount" item_name="foodDeliSlicedAngus" operation="GT" value="3"/>
+				<requirement name="PlayerItemCount" item_name="foodDeliSlicedChicken" operation="GT" value="3"/>
+				<requirement name="PlayerItemCount" item_name="foodDeliSlicedHam" operation="GT" value="3"/>
+				<requirement name="PlayerItemCount" item_name="foodDeliSlicedPastrami" operation="GT" value="3"/>
+				<requirement name="PlayerItemCount" item_name="foodDeliSlicedProsciutto" operation="GT" value="3"/>
+				<requirement name="PlayerItemCount" item_name="foodChocolateChips" operation="GT" value="100"/>
+				<requirement name="PlayerItemCount" item_name="foodKetchup" operation="GT" value="20"/>
+				<requirement name="PlayerItemCount" item_name="foodCheddar" operation="GT" value="10"/>
+				<requirement name="PlayerItemCount" item_name="foodFried Eggs" operation="GT" value="4"/>
+				<requirement name="PlayerItemCount" item_name="foodCorn Tortillas" operation="GT" value="5"/>
+				<requirement name="PlayerItemCount" item_name="foodFruit Salad" operation="GT" value="3"/>
+				<requirement name="PlayerItemCount" item_name="foodBanana" operation="GT" value="20"/>
+				<requirement name="PlayerItemCount" item_name="foodPeach" operation="GT" value="10"/>
+				<requirement name="PlayerItemCount" item_name="foodMixed Greens" operation="GT" value="3"/>
+				<requirement name="PlayerItemCount" item_name="foodCherry Tomato" operation="GT" value="10"/>
+				<requirement name="PlayerItemCount" item_name="foodBroccoli" operation="GT" value="20"/>
+				<requirement name="PlayerItemCount" item_name="foodCarrot" operation="GT" value="20"/>
+				<requirement name="PlayerItemCount" item_name="foodCabbage" operation="GT" value="2"/>
+				<requirement name="PlayerItemCount" item_name="foodLettuce" operation="GT" value="5"/>
+				<requirement name="PlayerItemCount" item_name="foodFries" operation="GT" value="2"/>
+				<requirement name="PlayerItemCount" item_name="foodRomaine" operation="GT" value="3"/>
+				<requirement name="PlayerItemCount" item_name="foodRomaine with mayonnaise" operation="GT" value="2"/>
+				<requirement name="PlayerItemCount" item_name="foodCherry Tomato Salad with Roasted Lemons" operation="GT" value="2"/>
+				<requirement name="PlayerItemCount" item_name="foodShredded Lettuce" operation="GT" value="5"/>
+				<requirement name="PlayerItemCount" item_name="foodMeyer Lemon" operation="GT" value="30"/>
+				<requirement name="PlayerItemCount" item_name="foodGreen Bell" operation="GT" value="20"/>
+				<requirement name="PlayerItemCount" item_name="foodTriple Taco Tuesday" operation="GT" value="1"/>
+				<requirement name="PlayerItemCount" item_name="foodQueso Fresco" operation="GT" value="10"/>
+				<!-- <requirement name="PlayerItemCount" item_name="foodCanRefried Beans" operation="GT" value="5"/> -->
+				<requirement name="PlayerItemCount" item_name="foodBeef Taco" operation="GT" value="3"/>
+				<requirement name="PlayerItemCount" item_name="foodtomato" operation="GT" value="10"/>
+				<requirement name="PlayerItemCount" item_name="foodTaco Shell" operation="GT" value="10"/>
+				<requirement name="PlayerItemCount" item_name="foodTortillas Chips" operation="GT" value="5"/>
+				<requirement name="PlayerItemCount" item_name="foodChips and Salsa" operation="GT" value="3"/>
+				<requirement name="PlayerItemCount" item_name="foodGuac and Chips" operation="GT" value="3"/>
+				<requirement name="PlayerItemCount" item_name="foodCrunchy Celery" operation="GT" value="10"/>
+				<requirement name="PlayerItemCount" item_name="foodCucumber" operation="GT" value="30"/>
+				<requirement name="PlayerItemCount" item_name="foodOkra" operation="GT" value="100"/>
+				<requirement name="PlayerItemCount" item_name="foodcream" operation="GT" value="100"/>
+				<requirement name="PlayerItemCount" item_name="foodwalnut" operation="GT" value="100"/>
+				<requirement name="PlayerItemCount" item_name="foodPapaya" operation="GT" value="5"/>
+				<requirement name="PlayerItemCount" item_name="foodPear" operation="GT" value="50"/>
+				<requirement name="PlayerItemCount" item_name="foodPearJuice" operation="GT" value="10"/>
+				<requirement name="PlayerItemCount" item_name="foodJalapeno Pepper" operation="GT" value="100"/>
+				<requirement name="PlayerItemCount" item_name="foodRotisserieChicken" operation="GT" value="1"/>
+				<requirement name="PlayerItemCount" item_name="foodHamburger Bun" operation="GT" value="5"/>
+				<requirement name="PlayerItemCount" item_name="foodCheeseburger" operation="GT" value="1"/>
+				<requirement name="PlayerItemCount" item_name="foodHamburger" operation="GT" value="1"/>
+				<requirement name="PlayerItemCount" item_name="foodBurger Basket" operation="GT" value="1"/>
+				<requirement name="PlayerItemCount" item_name="foodSarma" operation="GT" value="1"/>
+				<requirement name="PlayerItemCount" item_name="foodPunjenaPaprika" operation="GT" value="1"/>
+				<requirement name="PlayerItemCount" item_name="foodGulas" operation="GT" value="2"/>
+				<!-- <requirement name="PlayerItemCount" item_name="foodPlazma" operation="GT" value="10"/> -->
+				<requirement name="PlayerItemCount" item_name="drinkCiobar" operation="GT" value="10"/>				
+				<requirement name="PlayerItemCount" item_name="drinkMilk chocolate" operation="GT" value="20"/>
+				<requirement name="PlayerItemCount" item_name="foodfried mushrooms" operation="GT" value="3"/>
+				<requirement name="PlayerItemCount" item_name="foodEgg Omelet" operation="GT" value="2"/>
+				<requirement name="PlayerItemCount" item_name="foodGrilled Chicken Leg" operation="GT" value="5"/>
+				<requirement name="PlayerItemCount" item_name="foodFried Chicken Tenders" operation="GT" value="3"/>
+				<requirement name="PlayerItemCount" item_name="foodFried Chicken Leg" operation="GT" value="3"/>
+				<requirement name="PlayerItemCount" item_name="foodGrilled Chicken Wings" operation="GT" value="5"/>
+				<requirement name="PlayerItemCount" item_name="foodSpecial Burrito" operation="GT" value="1"/>
+				<requirement name="PlayerItemCount" item_name="foodPeas" operation="GT" value="30"/>
+				<!-- <requirement name="PlayerItemCount" item_name="foodCanSardine" operation="GT" value="3"/> -->
+				<!-- <requirement name="PlayerItemCount" item_name="foodCanChicken Breast" operation="GT" value="5"/> -->
+				<!-- <requirement name="PlayerItemCount" item_name="foodCanCorn" operation="GT" value="3"/> -->
+				<!-- <requirement name="PlayerItemCount" item_name="foodCanBeef" operation="GT" value="5"/> -->
+				<requirement name="PlayerItemCount" item_name="foodEggQuiche" operation="GT" value="2"/>
+				<requirement name="PlayerItemCount" item_name="foodEggSandwich" operation="GT" value="3"/>
+				<requirement name="PlayerItemCount" item_name="foodChickenStew" operation="GT" value="2"/>
+				<requirement name="PlayerItemCount" item_name="foodPopcorn" operation="GT" value="50"/>
+				<requirement name="PlayerItemCount" item_name="foodCheesepopcorn" operation="GT" value="3"/>
+				<requirement name="PlayerItemCount" item_name="foodPeanutButterJelly" operation="GT" value="10"/>
+				<requirement name="PlayerItemCount" item_name="foodBeanswithmushrooms" operation="GT" value="1"/>
+				<requirement name="PlayerItemCount" item_name="foodcakeBalls" operation="GT" value="20"/>
+				<requirement name="PlayerItemCount" item_name="foodGolden Spongecake" operation="GT" value="20"/>
+				<requirement name="PlayerItemCount" item_name="foodRaisinCookies" operation="GT" value="10"/>
+				<requirement name="PlayerItemCount" item_name="foodWoodlePie" operation="GT" value="10"/>
+				<requirement name="PlayerItemCount" item_name="foodRaisincake" operation="GT" value="20"/>
+				<requirement name="PlayerItemCount" item_name="foodRoastedmushrooms" operation="GT" value="5"/>
+				<requirement name="PlayerItemCount" item_name="foodFriedMushrooms1" operation="GT" value="3"/>
+				<requirement name="PlayerItemCount" item_name="foodPotatoWithMushrooms" operation="GT" value="2"/>
+				<requirement name="PlayerItemCount" item_name="foodGrilledFish" operation="GT" value="10"/>
+				<requirement name="PlayerItemCount" item_name="foodGrilledPrawns" operation="GT" value="10"/>
+				<requirement name="PlayerItemCount" item_name="foodGrilledmeatandprawns" operation="GT" value="5"/>
+				<requirement name="PlayerItemCount" item_name="foodBoiledPrawns" operation="GT" value="10"/>
+				<requirement name="PlayerItemCount" item_name="foodFishSoup" operation="GT" value="2"/>
+				<requirement name="PlayerItemCount" item_name="foodFishandFries" operation="GT" value="2"/>
+				<requirement name="PlayerItemCount" item_name="foodMushroomOmelette" operation="GT" value="2"/>
+				<requirement name="PlayerItemCount" item_name="foodMeatOmelette" operation="GT" value="1"/>
+				<requirement name="PlayerItemCount" item_name="foodPotatoOmelette" operation="GT" value="2"/>
+				<requirement name="PlayerItemCount" item_name="foodMashedPotato" operation="GT" value="2"/>
+				<requirement name="PlayerItemCount" item_name="foodPirogiWithMeat" operation="GT" value="10"/>
+				<requirement name="PlayerItemCount" item_name="foodPirogiWithMushrooms" operation="GT" value="10"/>
+				<requirement name="PlayerItemCount" item_name="foodRedSausageAndFries" operation="GT" value="2"/>
+				<requirement name="PlayerItemCount" item_name="foodToast" operation="GT" value="10"/>
+				<requirement name="PlayerItemCount" item_name="foodSlicedtoast" operation="GT" value="20"/>
+				<requirement name="PlayerItemCount" item_name="foodFriedEgg2" operation="GT" value="10"/>
+				<requirement name="PlayerItemCount" item_name="foodFriedEgg1" operation="GT" value="10"/>
+				<requirement name="PlayerItemCount" item_name="foodEggToast" operation="GT" value="5"/>
+				<requirement name="PlayerItemCount" item_name="foodChocolateSandwich" operation="GT" value="5"/>
+				<requirement name="PlayerItemCount" item_name="foodYuccaChips" operation="GT" value="10"/>
+				<requirement name="PlayerItemCount" item_name="foodBreadandcheesebreakfast" operation="GT" value="5"/>
+				<requirement name="PlayerItemCount" item_name="foodGreenplums" operation="GT" value="5"/>
+				<requirement name="PlayerItemCount" item_name="foodCoffeeCake" operation="GT" value="3"/>
+				<requirement name="PlayerItemCount" item_name="foodCoffeeCake2" operation="GT" value="10"/>
+				<requirement name="PlayerItemCount" item_name="foodHashbrown" operation="GT" value="3"/>
+				<requirement name="PlayerItemCount" item_name="foodScrambledEggs" operation="GT" value="5"/>
+				<requirement name="PlayerItemCount" item_name="foodEggSalad" operation="GT" value="2"/>
+				<requirement name="PlayerItemCount" item_name="foodMashedPotatoMeat" operation="GT" value="2"/>
+				<requirement name="PlayerItemCount" item_name="foodBlueberryPemmican" operation="GT" value="3"/>
+				<requirement name="PlayerItemCount" item_name="foodRubaboo" operation="GT" value="1"/>
+				<requirement name="PlayerItemCount" item_name="foodFriedCatfish" operation="GT" value="2"/>
+				<requirement name="PlayerItemCount" item_name="foodbananaBread" operation="GT" value="2"/>
+				<requirement name="PlayerItemCount" item_name="foodbananaPancakes" operation="GT" value="2"/>
+				<requirement name="PlayerItemCount" item_name="foodSushiRice" operation="GT" value="5"/>
+				<requirement name="PlayerItemCount" item_name="foodpeanutButter" operation="GT" value="3"/>
+				<requirement name="PlayerItemCount" item_name="foodPeanutButterSandwich" operation="GT" value="5"/>
+				<requirement name="PlayerItemCount" item_name="foodCrawfishGumbo" operation="GT" value="1"/>
+				<requirement name="PlayerItemCount" item_name="foodcottagebake" operation="GT" value="2"/>
+				<requirement name="PlayerItemCount" item_name="foodtunaSandwich" operation="GT" value="4"/>
+				<requirement name="PlayerItemCount" item_name="foodRiceMilk" operation="GT" value="2"/>
+				<requirement name="PlayerItemCount" item_name="foodricepudding" operation="GT" value="2"/>
+				<requirement name="PlayerItemCount" item_name="foodbeansOnToast" operation="GT" value="5"/>
+				<requirement name="PlayerItemCount" item_name="foodBlueberrycake" operation="GT" value="1"/>
+				<requirement name="PlayerItemCount" item_name="foodChickenNuggets" operation="GT" value="3"/>
+				<requirement name="PlayerItemCount" item_name="foodvegtablesSalad" operation="GT" value="3"/>
+				<requirement name="PlayerItemCount" item_name="foodGrilledCheese" operation="GT" value="20"/>
+				<requirement name="PlayerItemCount" item_name="foodChocolateCake" operation="GT" value="2"/>
+				<requirement name="PlayerItemCount" item_name="foodSpringRoll" operation="GT" value="1"/>
+				<requirement name="PlayerItemCount" item_name="foodBeefBroccoli" operation="GT" value="2"/>
+				<requirement name="PlayerItemCount" item_name="foodBaconEggsHashbrownsToast" operation="GT" value="2"/>
+				<requirement name="PlayerItemCount" item_name="foodParadisAlmonds" operation="GT" value="5"/>
+				<requirement name="PlayerItemCount" item_name="foodParadisPeanuts" operation="GT" value="10"/>
+				<requirement name="PlayerItemCount" item_name="foodCherryJamSandwich" operation="GT" value="10"/>
+				<requirement name="PlayerItemCount" item_name="foodLimeJamSandwich" operation="GT" value="10"/>
+				<requirement name="PlayerItemCount" item_name="foodPlainHotdog" operation="GT" value="3"/>
+				<requirement name="PlayerItemCount" item_name="foodCalzone" operation="GT" value="3"/>
+				<requirement name="PlayerItemCount" item_name="foodMeatballGrinder" operation="GT" value="2"/>
+				<requirement name="PlayerItemCount" item_name="foodStuffedGreenBell" operation="GT" value="3"/>
+				<requirement name="PlayerItemCount" item_name="foodCornChips" operation="GT" value="20"/>
+				<requirement name="PlayerItemCount" item_name="foodRawBacon" operation="GT" value="5"/>
+				<requirement name="PlayerItemCount" item_name="foodRawSteak" operation="GT" value="5"/>
+				<requirement name="PlayerItemCount" item_name="foodBaconGrilled" operation="GT" value="2"/>
+				<requirement name="PlayerItemCount" item_name="foodGrilledSteak" operation="GT" value="1"/>
+				<requirement name="PlayerItemCount" item_name="foodFriedSteak" operation="GT" value="1"/>
+				<requirement name="PlayerItemCount" item_name="foodTacoScrambledEgg" operation="GT" value="3"/>
+				<requirement name="PlayerItemCount" item_name="foodBurgerPlain" operation="GT" value="2"/>
+				<requirement name="PlayerItemCount" item_name="foodBurgerCheese" operation="GT" value="3"/>
+				<requirement name="PlayerItemCount" item_name="foodSandwichSlicedHam" operation="GT" value="2"/>
+				<requirement name="PlayerItemCount" item_name="foodSandwicSlicedChicken" operation="GT" value="2"/>
+				<requirement name="PlayerItemCount" item_name="foodSpecialBreakfastGyro" operation="GT" value="2"/>
+				<requirement name="PlayerItemCount" item_name="foodSandwichSlicedAngus" operation="GT" value="2"/>
+				<requirement name="PlayerItemCount" item_name="foodSpecialProsciutto" operation="GT" value="2"/>
+				<requirement name="PlayerItemCount" item_name="foodSandwichPastrami" operation="GT" value="2"/>
+				<requirement name="PlayerItemCount" item_name="foodTacoGroundMeat" operation="GT" value="3"/>
+				<requirement name="PlayerItemCount" item_name="foodLasagna" operation="GT" value="2"/>
+				<requirement name="PlayerItemCount" item_name="foodChilli" operation="GT" value="30"/>
+				<requirement name="PlayerItemCount" item_name="foodCauliflower" operation="GT" value="3"/>
+				<requirement name="PlayerItemCount" item_name="foodChives" operation="GT" value="20"/>
+				<requirement name="PlayerItemCount" item_name="foodDriedFruit" operation="GT" value="50"/>
+				<requirement name="PlayerItemCount" item_name="foodnuts" operation="GT" value="50"/>
+				<requirement name="PlayerItemCount" item_name="foodJamBlueberry" operation="GT" value="1"/>
+				<requirement name="PlayerItemCount" item_name="foodJamCherry" operation="GT" value="5"/>
+				<requirement name="PlayerItemCount" item_name="foodJamCitrus" operation="GT" value="5"/>
+				<requirement name="PlayerItemCount" item_name="foodJamGrape" operation="GT" value="5"/>
+				<requirement name="PlayerItemCount" item_name="foodJamLemon" operation="GT" value="5"/>
+				<requirement name="PlayerItemCount" item_name="foodJamLime" operation="GT" value="5"/>
+				<requirement name="PlayerItemCount" item_name="foodYuccaJam" operation="GT" value="5"/>
+				<requirement name="PlayerItemCount" item_name="foodAppleJam" operation="GT" value="5"/>				
+<!-- ************************************************************************************************************************** -->				
+				
+				<!-- <requirement name="PlayerItemCount" item_name="foodRottingFlesh" operation="GT" value="1"/> -->		
+				<!-- <requirement name="PlayerItemCount" item_name="foodShamSandwich" operation="GT" value="5"/> -->
+				<requirement name="PlayerItemCount" item_name="foodCornBread" operation="GT" value="10"/>
+				<requirement name="PlayerItemCount" item_name="foodCharredMeat" operation="GT" value="10"/>
+				<requirement name="PlayerItemCount" item_name="foodGrilledMeat" operation="GT" value="10"/>
+				<requirement name="PlayerItemCount" item_name="foodBoiledMeat" operation="GT" value="10"/>
+				<requirement name="PlayerItemCount" item_name="foodMeatStew" operation="GT" value="2"/>
+				<requirement name="PlayerItemCount" item_name="foodSteakAndPotato" operation="GT" value="2"/>
+				<requirement name="PlayerItemCount" item_name="foodShamChowder" operation="GT" value="2"/>
+				<requirement name="PlayerItemCount" item_name="foodHoboStew" operation="GT" value="2"/>
+				<requirement name="PlayerItemCount" item_name="foodFishTacos" operation="GT" value="3"/>
+				<requirement name="PlayerItemCount" item_name="foodChiliDog" operation="GT" value="2"/>
+			    <requirement name="PlayerItemCount" item_name="foodBakedPotato" operation="GT" value="10"/>
+				<requirement name="PlayerItemCount" item_name="foodBlueberryPie" operation="GT" value="2"/>
+				<requirement name="PlayerItemCount" item_name="foodPumpkinPie" operation="GT" value="2"/>
+				<requirement name="PlayerItemCount" item_name="foodPumpkinCheesecake" operation="GT" value="2"/>
+				<requirement name="PlayerItemCount" item_name="foodPumpkinBread" operation="GT" value="5"/>
+				<requirement name="PlayerItemCount" item_name="foodGumboStew" operation="GT" value="1"/>
+				<requirement name="PlayerItemCount" item_name="foodShepardsPie" operation="GT" value="1"/>
+				<requirement name="PlayerItemCount" item_name="foodSpaghetti" operation="GT" value="1"/>
+				<requirement name="PlayerItemCount" item_name="foodTunaFishGravyToast" operation="GT" value="1"/>
+			    <requirement name="PlayerItemCount" item_name="foodEggBoiled" operation="GT" value="10"/>
+				<requirement name="PlayerItemCount" item_name="foodBaconAndEggs" operation="GT" value="3"/>
+				<requirement name="PlayerItemCount" item_name="foodVegetableStew" operation="GT" value="3"/>
+				<requirement name="PlayerItemCount" item_name="foodRawMeat" operation="GT" value="30"/>
+				<requirement name="PlayerItemCount" item_name="foodChickenStew" operation="GT" value="1"/>
+				<requirement name="PlayerItemCount" item_name="foodChickenMiso" operation="GT" value="1"/>
+				<requirement name="PlayerItemCount" item_name="foodScrambledEggs" operation="GT" value="5"/>
+				<requirement name="PlayerItemCount" item_name="foodTrampStew" operation="GT" value="5"/>
+				<!-- <triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="buffSmell"/> -->
+				<triggered_effect trigger="onSelfBuffUpdate" action="CallGameEvent" event="fresh_meat" allow_client_call="true"/>
+			</effect_group>
+		</buff>
+		
+		<buff name="buffSmell" name_key="buffSmellName" description_key="buffSmellDesc" tooltip_key="buffSmellTooltip" remove_on_death="true" icon="ui_game_symbol_smell" icon_color="192,192,192">
+			<duration value="15"/>
+			<stack_type value="effect"/>
+			<display_value value="smell"/>
+			<display_value_format value="time"/>
+			<display_value_key value="{0:0}"/>
+			<update_rate value="1"/>
+			
+			<effect_group>
+				<triggered_effect trigger="onSelfBuffStart" action="AddJournalEntry" journal="buffSmellJournalTip"/>
+			</effect_group>
+			<effect_group>
+				<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="smell" operation="set" value="15"/>
+				<triggered_effect trigger="onSelfBuffStart" action="PlaySound" sound="crawler_roam" play_in_head="true"/>
+			</effect_group>
+			<effect_group>
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="smell" operation="add" value="-1"/>
+				<!-- <triggered_effect trigger="onSelfBuffUpdate" action="CallGameEvent" event="fresh_meat" allow_client_call="true"/> -->
+			</effect_group>
+			<effect_group>
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="smell" operation="set" value="15"/>
+				<requirement name="CVarCompare" cvar="smell" operation="LTE" value="0"/>
+			</effect_group>
+			<effect_group>
+				<triggered_effect trigger="onSelfBuffFinish" action="ModifyCVar" cvar="smell" operation="set" value="15"/>
+				<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar="smell" operation="set" value="15"/>
+				
+			</effect_group>
+		</buff>
+	</append>
+	
+	<append xpath="//buff[@name='buffStatusCheck01']/effect_group">
+		<triggered_effect trigger="onSelfEnteredGame" action="AddBuff" target="self" buff="buffAddHeatTrigger"/>
+		<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="self" buff="buffAddHeatTrigger"/>
+		<triggered_effect trigger="onSelfRespawn" action="AddBuff" target="self" buff="buffAddHeatTrigger"/>
+	</append>
+</Hells_Janitor>

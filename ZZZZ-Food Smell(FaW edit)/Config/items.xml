@@ -1,0 +1,117 @@
+<Faw>
+    <!-- <append xpath="//item[not (@name='foodRawMeat')]/effect_group[@name='Food Tier 0']">
+		<display_value name="dSmell" value="0"/> 
+	</append> -->
+	
+	<append xpath="//item[@name='foodVegetableStew']/effect_group[@name='Food Tier 2']">	
+		<display_value name="dSmell" value="3"/>
+	</append>	
+	
+	<append xpath="//item[@name='foodPumpkinBread']/effect_group[@name='Food Tier 2']">	
+		<display_value name="dSmell" value="5"/>
+	</append>
+	
+	<append xpath="//item[@name='foodMeatStew']/effect_group[@name='Food Tier 2']">
+		<display_value name="dSmell" value="2"/>
+	</append>
+	
+	<append xpath="//item[@name='foodSteakAndPotato']/effect_group[@name='Food Tier 2']">
+		<display_value name="dSmell" value="2"/>
+	</append>
+	
+	<append xpath="//item[@name='foodBlueberryPie']/effect_group[@name='Food Tier 2']">
+		<display_value name="dSmell" value="2"/>
+	</append>
+
+	<append xpath="//item[@name='foodPumpkinPie']/effect_group[@name='Food Tier 2']">
+		<display_value name="dSmell" value="2"/>
+	</append>
+
+	<append xpath="//item[@name='foodPumpkinCheesecake']/effect_group[@name='Food Tier 2']">
+		<display_value name="dSmell" value="2"/>
+	</append>
+	
+	<append xpath="//item[@name='foodRawMeat']/effect_group[@name='Food Tier 0']">
+		<display_value name="dSmell" value="30"/>
+	</append>
+		
+	<append xpath="//item[@name='foodTrampStew']/effect_group[@name='Food Tier 0/1']">
+		<display_value name="dSmell" value="5"/>
+	</append>
+	
+	<append xpath="//item[@name='foodVagabondStew']/effect_group[@name='Food Tier 0/1']">
+		<display_value name="dSmell" value="5"/>
+	</append>
+	
+	<append xpath="//item[@name='foodEggBoiled']/effect_group[@name='Food Tier 0/1']">
+		<display_value name="dSmell" value="10"/>
+	</append>
+	
+	<append xpath="//item[@name='foodCharredMeat']/effect_group[@name='Food Tier 0/1']">
+		<display_value name="dSmell" value="10"/>
+	</append>
+	
+	<append xpath="//item[@name='foodGrilledMeat']/effect_group[@name='Food Tier 1']">
+		<display_value name="dSmell" value="10"/>
+	</append> 
+	
+	<append xpath="//item[@name='foodBoiledMeat']/effect_group[@name='Food Tier 1']">
+		<display_value name="dSmell" value="10"/>
+	</append>
+	
+	<append xpath="//item[@name='foodBakedPotato']/effect_group[@name='Food Tier 1']">
+		<display_value name="dSmell" value="10"/>
+	</append>
+	
+	<append xpath="//item[@name='foodCornBread']/effect_group[@name='Food Tier 1']">
+		<display_value name="dSmell" value="10"/>
+	</append>
+	
+	<append xpath="//item[@name='foodBaconAndEggs']/effect_group[@name='Food Tier 1']">
+		<display_value name="dSmell" value="3"/>
+	</append>
+	
+	<append xpath="//item[@name='foodChickenMiso']/effect_group[@name='Food Tier 2']">
+		<display_value name="dSmell" value="1"/>
+	</append>
+	
+	<append xpath="//item[@name='foodShamChowder']/effect_group[@name='Food Tier 3']">
+		<display_value name="dSmell" value="2"/>
+	</append>
+	
+	<append xpath="//item[@name='foodHoboStew']/effect_group[@name='Food Tier 3']">
+		<display_value name="dSmell" value="2"/>
+	</append>
+	
+	<append xpath="//item[@name='foodFishTacos']/effect_group[@name='Food Tier 3']">
+		<display_value name="dSmell" value="2"/>
+	</append>
+	
+	<append xpath="//item[@name='foodChiliDog']/effect_group[@name='Food Tier 3']">
+		<display_value name="dSmell" value="2"/>
+	</append>
+	
+	<append xpath="//item[@name='foodGumboStew']/effect_group[@name='Food Tier 4']">
+		<display_value name="dSmell" value="1"/>
+	</append>
+	
+	<append xpath="//item[@name='foodShepardsPie']/effect_group[@name='Food Tier 4']">
+		<display_value name="dSmell" value="1"/>
+	</append>
+	
+	<append xpath="//item[@name='foodSpaghetti']/effect_group[@name='Food Tier 4']">
+		<display_value name="dSmell" value="1"/>
+	</append>
+	
+	<append xpath="//item[@name='foodTunaFishGravyToast']/effect_group[@name='Food Tier 4']">
+		<display_value name="dSmell" value="1"/>
+	</append>
+	
+	<!-- <append xpath="//item/effect_group[@name='Food Tier 3']">
+		<display_value name="dSmell" value="3"/>
+	</append>
+	
+	<append xpath="//item/effect_group[@name='Food Tier 4']">
+		<display_value name="dSmell" value="2"/>
+	</append> -->
+</Faw> 
